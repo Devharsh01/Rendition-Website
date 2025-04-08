@@ -2,8 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-    display: none;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Sail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-  
+::-webkit-scrollbar {
+  display: none;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+}
+
+.sub-heading {
+  font-family: "Sail", system-ui;
+}
+
+.text-content {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --black-01: #100f11;
+  --black-02: #18171a;
+  --black-03: #403f45;
+  --black-04: #58565e;
+  --black-05: #6f6d78;
+  --black-06: #878491;
+  --black-07: #b6b3c4;
+
+  --red-01: #4d000f;
+  --red-02: #80001a;
+  --red-03: #b20024;
+  --red-04: #ff0033;
+  --red-05: #ff4d70;
+  --red-06: #ff8099;
+  --red-07: #ffccd6;
+
+  --blue-01: #080017;
+  --blue-02: #100030;
+  --blue-03: #160930;
+  --blue-04: #190e30;
+  --blue-05: #2b1d4a;
+  --blue-06: #533e7d;
+  --blue-07: #afa1c9;
+
+  --white-01: #646466;
+  --white-02: #7e7d80;
+  --white-03: #979699;
+  --white-04: #b0afb2;
+  --white-05: #c9c8cc;
+  --white-06: #e2e1e5;
+  --white-07: #fbfaff;
+}

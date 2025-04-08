@@ -13,8 +13,8 @@
     position: relative;
 }
 .faq-button:hover{
-  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
-  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #FF4D70 0%, #FF0033 74%);
+  background-color: #FF4D70;
 }
 .faq-button svg {
     height: 1.5rem;
