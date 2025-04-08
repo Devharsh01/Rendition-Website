@@ -100,7 +100,7 @@ const Footer = withLoadTracking(({ onLoad }) => {
 
         {/* Bottom copyright bar */}
         <div className="text-content mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-white/60 text-xs sm:text-sm">
-          <p>© 2025 Dreams Reality. All rights reserved.</p>
+          <p>© Rendition 2025. All rights reserved.</p>
         </div>
       </div>
     </div>

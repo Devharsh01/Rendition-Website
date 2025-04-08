@@ -230,9 +230,9 @@ const Form = withLoadTracking(({onLoad}) => {
               transition={{ duration: 0.5 }}
               className="w-full px-4 sm:px-6 md:px-8"
             >
-              <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-thick sm:mt-8 mb-6 sm:mb-8'>Want to Join Us?</h1>
+              <h1 className='sub-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-thick sm:mt-8 mb-6 sm:mb-8'>Want to Join Us?</h1>
               <div className='relative flex flex-col w-full justify-center items-center gap-5'>
-                <div className='relative flex justify-center flex-col sm:flex-row sm:flex-wrap gap-6 sm:gap-8 md:gap-16 w-full sm:w-4/5 md:w-3/4 lg:w-3/5 xl:w-1/2'>
+                <div className='text-content relative flex justify-center flex-col sm:flex-row sm:flex-wrap gap-6 sm:gap-8 md:gap-16 w-full sm:w-4/5 md:w-3/4 lg:w-3/5 xl:w-1/2 py-4'>
                   {/* Name Tag */}
                   <section className='w-full sm:w-[calc(50%-1rem)] md:w-2/5 relative flex gap-2 items-end'>
                     <svg 
@@ -305,7 +305,7 @@ const Form = withLoadTracking(({onLoad}) => {
                 </div>
                 <button 
                   id='nextButton'
-                  className='btn mt-6 p-3 sm:p-4 sm:mb-6 bg-transparent border-2 text-white text-xl sm:text-2xl relative w-32 sm:w-[150px] rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-500' 
+                  className='text-content btn mt-6 p-3 sm:p-4 sm:mb-6 bg-transparent border-2 text-white text-xl sm:text-2xl relative w-32 sm:w-[200px] rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-500' 
                   onClick={handleNext}
                 >
                   Let's Gooo

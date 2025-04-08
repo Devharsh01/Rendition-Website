@@ -87,7 +87,7 @@ const assets = {
     }
 };
 
-const backend_URL = "https://rendition-backend.onrender.com"
+const backend_URL = "https://rendition-backend.onrender.com";
 
 const emotions = [
     {
@@ -231,62 +231,71 @@ const team = [
 
 // Add New Acts in Sequence only
 const acts = [
-    {
-        category: "MonoAct",
-        src: "https://www.youtube.com/embed/QLl_LjB_4AQ?rel=0&si=kuzZTvzhr1hmy2KD",
-        title: "Lift Monoact By Kavya Patni",
-    },
-    {
-        category: "MonoAct",
-        src: "https://www.youtube.com/embed/6B7kguECnRs?rel=0&si=6WiNharUK9h1sZEP",
-        title: "Poet Monoact By Navya Jain",
-    },
-    {
-        category: "MonoAct",
-        src: "https://www.youtube.com/embed/bBn5mTiggxo?rel=0&si=4nLKso3Wn8t00-A8",
-        title: "MeeraBai Monoact By Kriti Sharma",
-    },
-    {
-        category: "MonoAct",
-        src: "https://www.youtube.com/embed/7AFAV2b_yPE?rel=0&si=aVPecZapF-KhrUJm",
-        title: "Teenage Dirtbag Monoact By Saanvi"
-    },
-    {
-        category: "StagePlay",
-        src: "https://www.youtube.com/embed/XZgwSfBHA_w?rel=0&si=W0GYF4XTUMw8SAhb",
-        title: "StagePlay By Team Cream & Hymen",
-    },
-    {
-        category: "StagePlay",
-        src: "https://www.youtube.com/embed/Se5LobspQI8?rel=0&si=j6tG7HmlEUuQZIZa",
-        title: "StagePlay By Team HIV",
-    },
-    {
-        category: "StagePlay",
-        src: "https://www.youtube.com/embed/PVza2mIk8SU?rel=0&si=dldVl4fgrUCVW7b-",
-        title: "StagePlay By Team Rab ne Chadha di Thodi",
-    },
-]
+  {
+    category: "MonoAct",
+    src: "https://www.youtube.com/embed/QLl_LjB_4AQ?rel=0&si=kuzZTvzhr1hmy2KD",
+    title: "Lift Monoact By Kavya Patni",
+  },
+  {
+    category: "MonoAct",
+    src: "https://www.youtube.com/embed/6B7kguECnRs?rel=0&si=6WiNharUK9h1sZEP",
+    title: "Poet Monoact By Navya Jain",
+  },
+  {
+    category: "MonoAct",
+    src: "https://www.youtube.com/embed/bBn5mTiggxo?rel=0&si=4nLKso3Wn8t00-A8",
+    title: "MeeraBai Monoact By Kriti Sharma",
+  },
+  {
+    category: "MonoAct",
+    src: "https://www.youtube.com/embed/7AFAV2b_yPE?rel=0&si=aVPecZapF-KhrUJm",
+    title: "Teenage Dirtbag Monoact By Saanvi",
+  },
+  {
+    category: "StagePlay",
+    src: "https://www.youtube.com/embed/XZgwSfBHA_w?rel=0&si=W0GYF4XTUMw8SAhb",
+    title: "StagePlay By Team Cream & Hymen",
+  },
+  {
+    category: "StagePlay",
+    src: "https://www.youtube.com/embed/Se5LobspQI8?rel=0&si=j6tG7HmlEUuQZIZa",
+    title: "StagePlay By Team HIV",
+  },
+  {
+    category: "StagePlay",
+    src: "https://www.youtube.com/embed/PVza2mIk8SU?rel=0&si=dldVl4fgrUCVW7b-",
+    title: "StagePlay By Team Rab ne Chadha di Thodi",
+  },
+];
 
 const questions = {
-    Actor : [
-        'Everyone at some point in their lives has thought of portraying a character. So, name any such favourite character of yours. This character can be a part of a movie, a drama, a novel or it can also be an inspiration from real life.',
-        'Share any of your performance/experience with us.(optional)'
-    ],
-    Scripter : [
-        'Amid the tapestry of storytelling, can you spin a new narrative for the closure of a movie frequently adorned with the label of overrated? What we want from you is to craft a compelling short story that brings this alternative ending to life, weaving together the threads of imagination and creativity.',
-        'Transport yourself into the world of a story, where you inhabit the persona of a chosen character. As the threads of imagination weave you into their narrative, consider the choices you would make, the emotions you would feel, and the paths you would tread. Paint a literary canvas that vividly captures the essence of this characters journey, inviting readers to stroll alongside you through the captivating landscape of your envisioned adventure."',
-    ],
-    Graphic_Designer : [
-        'Which platform do you prefer for designing purpose?',
-        'Share your work(s) with us!'
-    ],
-    Video_Editor : [
-        'Which software do you prefer for editing purpose?',
-        'Share the drive link that contains any work(related to video editing) you have done in the past or something that you have recently created.'
-    ],
-}
+  Actor: [
+    "Everyone at some point in their lives has thought of portraying a character. So, name any such favourite character of yours. This character can be a part of a movie, a drama, a novel or it can also be an inspiration from real life.",
+    "Share any of your performance/experience with us.(optional)",
+  ],
+  Scripter: [
+    "Amid the tapestry of storytelling, can you spin a new narrative for the closure of a movie frequently adorned with the label of overrated? What we want from you is to craft a compelling short story that brings this alternative ending to life, weaving together the threads of imagination and creativity.",
+    'Transport yourself into the world of a story, where you inhabit the persona of a chosen character. As the threads of imagination weave you into their narrative, consider the choices you would make, the emotions you would feel, and the paths you would tread. Paint a literary canvas that vividly captures the essence of this characters journey, inviting readers to stroll alongside you through the captivating landscape of your envisioned adventure."',
+  ],
+  Graphic_Designer: [
+    "Which platform do you prefer for designing purpose?",
+    "Share your work(s) with us!",
+  ],
+  Video_Editor: [
+    "Which software do you prefer for editing purpose?",
+    "Share the drive link that contains any work(related to video editing) you have done in the past or something that you have recently created.",
+  ],
+};
 
-const roles = ['Actor', 'Scripter', 'Graphic_Designer', 'Video_Editor'];
+const roles = ["Actor", "Scripter", "Graphic_Designer", "Video_Editor"];
 
-export {emotions, events, background_images, team, acts, questions, backend_URL, roles};
+export {
+  emotions,
+  events,
+  background_images,
+  team,
+  acts,
+  questions,
+  backend_URL,
+  roles,
+};
