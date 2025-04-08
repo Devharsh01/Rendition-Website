@@ -2,9 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-html, body {
+html,
+body {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
+
 
 .logo {
   height: 6em;
@@ -20,7 +22,7 @@ html, body {
 }
 
 .loading-text {
-  animation: blink 2.0s ease-in-out infinite;
+  animation: blink 2s ease-in-out infinite;
 }
 
 .heading {

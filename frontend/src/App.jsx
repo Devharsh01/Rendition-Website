@@ -1,8 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Events, Footer, Productions, Home, Navbar, Teachings, Team, Form, Preloader} from './components';
-import RenditionLogo from './assets/logo.png'; // Import your logo
-import './App.css'
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import {
+  Events,
+  Footer,
+  Productions,
+  Home,
+  Navbar,
+  Teachings,
+  Team,
+  Form,
+  Preloader,
+} from "./components";
+import RenditionLogo from "./assets/logo.png"; // Import your logo
+import "./App.css";
 
 // Custom Loading Component with Circular Loader
 const LoadingScreen = ({ onLoadComplete }) => {
@@ -31,12 +41,12 @@ const LoadingScreen = ({ onLoadComplete }) => {
   }, [onLoadComplete]);
 
   return (
-
     <div
-      className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-1000 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+      className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-1000 ${
+        isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
     >
-      <Preloader percentage={percentage}/> 
+      <Preloader percentage={percentage} />
     </div>
   );
 };
@@ -59,7 +69,8 @@ const useComponentLoader = (componentCount) => {
 };
 
 function App() {
-  const { loadedComponents, isFullyLoaded, incrementLoaded } = useComponentLoader(7); // 7 components
+  const { loadedComponents, isFullyLoaded, incrementLoaded } =
+    useComponentLoader(7); // 7 components
   const [showWebsite, setShowWebsite] = useState(false);
 
   const handleLoadComplete = () => {
@@ -71,20 +82,22 @@ function App() {
 
   return (
     <div className="flex flex-col overflow-x-hidden bg-black">
-      {!showWebsite && (
-        <LoadingScreen onLoadComplete={handleLoadComplete} />
-      )}
+      {!showWebsite && <LoadingScreen onLoadComplete={handleLoadComplete} />}
 
-      <div className={`transition-opacity scroll-container duration-1000 ${showWebsite ? 'opacity-100' : 'opacity-0'
-        }`}>
+      <div
+        className={`transition-opacity scroll-container duration-1000 ${
+          showWebsite ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <BrowserRouter>
           <Navbar onLoad={incrementLoaded} />
           <Home onLoad={incrementLoaded} />
-          <Teachings onLoad={incrementLoaded} />
+
           <Events onLoad={incrementLoaded} />
+          <Teachings onLoad={incrementLoaded} />
           <Team onLoad={incrementLoaded} />
-          <Productions onLoad={incrementLoaded}  />
-          <Form onLoad={incrementLoaded}/>
+          <Productions onLoad={incrementLoaded} />
+          <Form onLoad={incrementLoaded} />
           <Footer />
         </BrowserRouter>
       </div>
