@@ -6,5 +6,6 @@ import Navbar from './Navbar'
 import Team from './Team'
 import Teachings from './Techings'
 import Form from './Form'
+import Preloader from './Preloader'
 
-export {Events, Footer, Productions, Home, Navbar, Teachings, Team, Form}
+export {Events, Footer, Productions, Home, Navbar, Teachings, Team, Form, Preloader}

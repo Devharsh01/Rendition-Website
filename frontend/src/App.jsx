@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Events, Footer, Productions, Home, Navbar, Teachings, Team, Form } from './components';
+import { Events, Footer, Productions, Home, Navbar, Teachings, Team, Form, Preloader} from './components';
 import RenditionLogo from './assets/logo.png'; // Import your logo
 import './App.css'
 
@@ -36,33 +36,7 @@ const LoadingScreen = ({ onLoadComplete }) => {
       className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-1000 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
     >
-      <div className="relative w-full max-w-2xl px-8 flex flex-col items-center justify-center space-y-8">
-        {/* Logo */}
-        <div className="w-48 h-48 opacity-90">
-          <img
-            src={RenditionLogo}
-            alt="Rendition Logo"
-            className="w-full h-full object-contain"
-          />
-        </div>
-        {/* Percentage Text */}
-        <div className="loading-text text-white text-xl font-light tracking-wider ">
-          Loading...
-        </div>
-
-        {/* Elegant Single Line Loader */}
-        <div className="w-full h-[2px] relative overflow-hidden">
-          <div
-            className="absolute left-0 top-0 h-full bg-white transition-all duration-300 ease-linear"
-            style={{
-              width: `${percentage}%`,
-              background: 'linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.3))',
-              boxShadow: '0 0 15px rgba(255,255,255,0.3)'
-            }}
-          />
-        </div>
-
-      </div>
+      <Preloader percentage={percentage}/> 
     </div>
   );
 };

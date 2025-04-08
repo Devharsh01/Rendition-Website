@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import logo from '../assets/logo.png'
-import { fadeIn } from '../utils/motion';
+import { fadeIn } from '../constants/utils/motion';
 import { motion } from 'framer-motion';
 import { withLoadTracking } from './withLoadTracking'
 

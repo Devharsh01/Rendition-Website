@@ -107,7 +107,7 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
       justifyContent: "center",
       transition: { 
         duration: 0.3, // Reduced from 0.6
-        type: "spring",
+        type: "tween",
         stiffness: 100,
         damping: 15
       }
@@ -118,7 +118,7 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
       justifyContent: "flex-start",
       transition: { 
         duration: 0.3, // Reduced from 0.6
-        type: "spring",
+        type: "tween",
         stiffness: 100,
         damping: 15
       }
@@ -237,12 +237,14 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
               animate="visible"
               exit="exit"
             >
-              <button className='absolute text-2xl sm:text-3xl text-slate-700 left-[85%] md:left-[95%] transition-all duration-500 hover:text-black hover:cursor-pointer hover:scale-105' onClick={()=>{setSelectedRole(null)}}>
-                Esc
-              </button>
-              <h2 className="text-2xl sm:text-3xl text-gray-800 mb-4 sm:mb-6 font-bold">
-                {selectedRole} <span className="text-blue-600">Questions</span>
-              </h2>
+              <div className='flex flex-row justify-between'>
+                <h2 className="text-2xl sm:text-3xl text-gray-800 mb-4 sm:mb-6 font-bold">
+                  {selectedRole} <span className="text-blue-600">Questions</span>
+                </h2>
+                <button className='text-2xl sm:text-3xl text-slate-700 -mt-6 transition-all duration-500 hover:text-black hover:cursor-pointer hover:scale-105' onClick={()=>{setSelectedRole(null)}}>
+                  Esc
+                </button>
+              </div>
               <div className="flex flex-col gap-4 sm:gap-6">
                 {questions[selectedRole].map((question, index) => (
                   <motion.div 
@@ -267,7 +269,7 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
               
               {/* Back button when a role is selected - for mobile */}
               <motion.button
-                className="mt-6 py-2 px-5 bg-gray-500 text-white rounded-lg font-semibold transition-all duration-200 md:hidden"
+                className="mt-6 py-2 px-5 bg-gray-500 text-white rounded-lg font-semibold transition-all duration-200"
                 whileHover={{ scale: 1.03 }} // Reduced scale
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setSelectedRole(null)}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { background_images } from '../constants'
 import './CSS/Team.css'
 import { motion } from 'framer-motion'
-import { textVariant } from '../utils/motion'
+import { textVariant } from '../constants/utils/motion'
 import { team } from '../constants'
 import { withLoadTracking } from './withLoadTracking'
 
@@ -64,6 +64,7 @@ const Team = withLoadTracking(({onLoad}) => {
         ))}
       </div>  
       <div className='absolute inset-0 bg-black opacity-70'></div>
+      <div className='absolute inset-0 bg-gradient-to-r from-[#080017] from-10% to-transparent to-60%'></div>
       <div className='relative '>
         <motion.div className='flex flex-col md:flex-row justify-between round heading text-white p-10 font-bold text-4xl md:text-7xl leading-[1.3em]' variants={textVariant(0)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}> 
           <div className={`title font-bold text-5xl md:text-7xl leading-[1.3em] `}>
@@ -86,7 +87,7 @@ const Team = withLoadTracking(({onLoad}) => {
             {item.coordinators !== null ? 
             <div className='relative w-full md:w-[40%] gap-10' > 
               <div className='text-4xl lg:text-5xl text-transparent font-bold bg-clip-text bg-gradient-to-t from-orange-700 to-orange-200'>Coordinators</div>
-              <div className='flex flex-col justify-center h-max p-3 mt-2 backdrop-blur-sm w-full md:w-max'>
+              <div className='flex flex-col justify-center h-max p-3 mt-2 w-full md:w-max'>
                 <div key={index} className='relative inset-0 flex flex-wrap md:flex-col gap-4 md:gap-2'>
                   {/* Coordinators' Photos */}
                   {item.coordinators_photo.map((photo, photoIndex) => (

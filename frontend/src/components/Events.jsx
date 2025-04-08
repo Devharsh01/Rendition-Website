@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {events} from '../constants'
 import { motion, steps } from 'framer-motion'
-import { textVariant } from '../utils/motion'
+import { textVariant } from '../constants/utils/motion'
 import './CSS/Events.css'
 import { withLoadTracking } from './withLoadTracking'
 
@@ -75,13 +75,13 @@ const Events = withLoadTracking(({onLoad}) => {
                     <motion.div className={`author font-bold leading-6 `} variants={textVariant(0)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
                       {item.author}
                     </motion.div>
-                    <motion.div className={`heading title font-bold text-4xl sm:text-7xl leading-[1.3em] `} variants={textVariant(0.2)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
+                    <motion.div className={`heading title font-bold text-4xl sm:text-5xl leading-[1.3em] `} variants={textVariant(0.2)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
                       {item.title}
                     </motion.div>
-                    <motion.div className={`heading topic font-bold text-7xl leading-[1.3em] text-[#f1683a] `} variants={textVariant(0.4)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
+                    <motion.div className={`sub-heading topic font-bold text-8xl leading-[1.3em] text-[#f1683a] `} variants={textVariant(0.4)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
                       {item.topic}
                     </motion.div>
-                    <motion.div className="des" variants={textVariant(0.6)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
+                    <motion.div className="text-content des" variants={textVariant(0.6)} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.25}}>
                       {item.description}
                     </motion.div>
                   </div>
@@ -95,7 +95,7 @@ const Events = withLoadTracking(({onLoad}) => {
               <div className="item w-[150px] h-[220px] relative shrink-0" key={index}>
                 <img src={item.image} alt="" className="w-full h-full object-cover rounded-lg" />
                 <div className="content absolute inset-[10px] top-3/4 ">
-                  <div className="title font-bold">{item.topic}</div>
+                  <div className="text-content title font-bold">{item.topic}</div>
                 </div>
               </div>
             )

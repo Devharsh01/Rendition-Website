@@ -1,3 +1,4 @@
+
 /* CSS Properties for the Teaching Page and 3D Implimentation */
 .preserve-3d {                          /* Preserve the 3D space */
     transform-style: preserve-3d;
@@ -40,6 +41,9 @@
     animation-play-state: paused;
   }
   
+  .heading {
+    font-family: "Sail", system-ui;
+}
   
 .reflection {
     position: absolute;

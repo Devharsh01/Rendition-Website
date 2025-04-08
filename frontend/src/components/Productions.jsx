@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { textVariant } from '../utils/motion'
+import { textVariant } from '../constants/utils/motion'
 import { acts } from '../constants'
 import ToolkitButton from './ToolkitButton'
 import './CSS/Productions.css'
