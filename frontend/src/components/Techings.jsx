@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import {styles} from '../styles'
 import { gsap } from 'gsap/gsap-core'
 import { TextPlugin } from 'gsap/all'
-import { textVariant } from '../constants/utils/motion'
+import { textVariant } from '../utils/motion'
 import { withLoadTracking } from './withLoadTracking'
 
 const Techings = withLoadTracking(({onLoad}) => {

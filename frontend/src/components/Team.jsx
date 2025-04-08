@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { background_images } from '../constants'
 import './CSS/Team.css'
 import { motion } from 'framer-motion'
-import { textVariant } from '../constants/utils/motion'
+import { textVariant } from '../utils/motion'
 import { team } from '../constants'
 import { withLoadTracking } from './withLoadTracking'
 

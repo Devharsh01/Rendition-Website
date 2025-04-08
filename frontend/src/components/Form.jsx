@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import videoBg from '../assets/LT_Video5.mp4';
 import './CSS/Form.css';
 import RoleSelection from './RoleSelection';
 import { questions, backend_URL, roles } from '../constants';
@@ -22,6 +21,7 @@ const Form = withLoadTracking(({onLoad}) => {
     answers: {}
   });
   const [errors, setErrors] = useState({})
+  const videoBg = 'https://res.cloudinary.com/dspenamcg/video/upload/v1744107177/LT_Video5_vdassl.mp4'
 
   useEffect(() => {
     if(details.selectedRoles.length > 0)

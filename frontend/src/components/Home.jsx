@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import background from '../assets/background.jpg'
 import { styles } from '../styles'
 import { motion } from 'framer-motion'
-import { textVariant } from '../constants/utils/motion'
+import { textVariant } from '../utils/motion'
 import { withLoadTracking } from './withLoadTracking'
 
 const heading = "RENDITION";
@@ -23,6 +22,8 @@ const Home = withLoadTracking(({onLoad}) => {
       window.removeEventListener('scroll', handleScroll);
     }
   },[])
+
+  const background = 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/background_qfrj4s.jpg'
 
   return (
     <div id="Home" className={`relative h-screen w-screen flex items-center justify-center`}>
