@@ -45,11 +45,13 @@ const Navbar = withLoadTracking(({onLoad}) => {
 
       pages.forEach((page) => {
         const section = document.getElementById(page);
-        const rect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-  
-        if (rect.top >= 0 && rect.top <= windowHeight * 0.2) {
-          setSelected(page);
+        if(section) {
+          const rect = section.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+    
+          if (rect.top >= 0 && rect.top <= windowHeight * 0.2) {
+            setSelected(page);
+          }
         }
       });
     };
