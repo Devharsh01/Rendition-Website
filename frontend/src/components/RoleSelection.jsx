@@ -177,23 +177,27 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
 
   return (
     <div className="relative flex flex-col items-center justify-between w-full min-h-screen py-6 sm:py-8 md:py-12 px-4 sm:px-6">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl text-white text-center font-bold mt-2 mb-6 sm:mb-8 md:mb-12 tracking-tight drop-shadow-lg">
-        <span className="text-white">Choose Your Role</span>
+      <h1 className="text-content text-3xl sm:text-4xl md:text-5xl text-white text-center font-bold mt-2 mb-6 sm:mb-8 md:mb-12 tracking-tight drop-shadow-lg">
+        <span className="text-content text-white">Choose Your Role</span>
       </h1>
-      
+
       {/* Role selection options */}
-      <div className={`relative flex flex-col md:flex-row h-full w-full max-w-6xl mx-auto justify-center ${selectedRole ? 'items-start' : 'items-center'} gap-4 sm:gap-6 md:gap-8 transition-all duration-700 ease-in-out`}>
-        <motion.div 
+      <div
+        className={`relative flex flex-col md:flex-row h-full w-full max-w-6xl mx-auto justify-center ${
+          selectedRole ? "items-start" : "items-center"
+        } gap-4 sm:gap-6 md:gap-8 transition-all duration-700 ease-in-out`}
+      >
+        <motion.div
           className={`flex gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 md:mb-8 transition-all duration-500 ease-in-out flex-wrap sm:flex-nowrap
-            ${selectedRole ? 'w-[99%] md:w-1/5' : 'justify-center max-w-md'}`}
+            ${selectedRole ? "w-[99%] md:w-1/5" : "justify-center max-w-md"}`}
           variants={containerVariants}
           initial={false}
-          animate={isMobile ? 'row' : selectedRole ? "column" : "row"}
+          animate={isMobile ? "row" : selectedRole ? "column" : "row"}
         >
           {roles.map((role, index) => {
             const isSelected = selectedRole === role;
             const isApplied = appliedRoles.includes(role);
-            
+
             return (
               <motion.div
                 key={role}
@@ -202,10 +206,14 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className={`cursor-pointer p-3 sm:p-4 md:p-5 rounded-xl text-white text-base sm:text-lg md:text-xl font-semibold shadow-xl backdrop-blur-sm transition-colors duration-300 
-                  ${isSelected ? 'bg-gradient-to-r from-green-500 to-green-600' : 
-                    isApplied ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 
-                    'bg-gradient-to-r from-gray-700 to-gray-800 hover:from-blue-600 hover:to-blue-700'}`}
+                className={`text-content cursor-pointer p-3 sm:p-4 md:p-5 rounded-xl text-white text-base sm:text-lg md:text-xl font-semibold shadow-xl backdrop-blur-sm transition-colors duration-300 
+                  ${
+                    isSelected
+                      ? "bg-gradient-to-r from-green-500 to-green-600"
+                      : isApplied
+                      ? "bg-gradient-to-r from-purple-500 to-pink-500"
+                      : "bg-gradient-to-r from-gray-700 to-gray-800 hover:from-blue-600 hover:to-blue-700"
+                  }`}
                 onClick={() => handleRoleSelection(role)}
                 whileHover={{ scale: 1.03 }} // Reduced scale effect
                 whileTap={{ scale: 0.98 }}
@@ -213,7 +221,7 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
               >
                 <div className="flex items-center gap-2 sm:gap-3">
                   {isApplied && (
-                    <motion.div 
+                    <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.2 }} // Simplified
@@ -226,7 +234,7 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
             );
           })}
         </motion.div>
-        
+
         {/* Questions for selected role */}
         <AnimatePresence mode="sync">
           {selectedRole && (
@@ -237,39 +245,53 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
               animate="visible"
               exit="exit"
             >
-              <div className='flex flex-row justify-between'>
-                <h2 className="text-2xl sm:text-3xl text-gray-800 mb-4 sm:mb-6 font-bold">
-                  {selectedRole} <span className="text-blue-600">Questions</span>
+              <div className="flex flex-row justify-between">
+                <h2 className="text-content text-2xl sm:text-3xl text-gray-800 mb-4 sm:mb-6 font-bold">
+                  {selectedRole}{" "}
+                  <span className="text-content text-blue-600">Questions</span>
                 </h2>
-                <button className='text-2xl sm:text-3xl text-slate-700 -mt-6 transition-all duration-500 hover:text-black hover:cursor-pointer hover:scale-105' onClick={()=>{setSelectedRole(null)}}>
+                <button
+                  className="text-content text-2xl sm:text-3xl text-slate-700 -mt-6 transition-all duration-500 hover:text-black hover:cursor-pointer hover:scale-105"
+                  onClick={() => {
+                    setSelectedRole(null);
+                  }}
+                >
                   Esc
                 </button>
               </div>
               <div className="flex flex-col gap-4 sm:gap-6">
                 {questions[selectedRole].map((question, index) => (
-                  <motion.div 
-                    key={index} 
+                  <motion.div
+                    key={index}
                     className="flex flex-col gap-1 sm:gap-2"
                     custom={index}
                     variants={questionVariants}
                     initial="hidden"
                     animate="visible"
                   >
-                    <label className="text-gray-700 font-medium text-sm sm:text-lg">{question}</label>
-                    <input 
-                      type="text" 
-                      className="p-3 sm:p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 shadow-sm hover:shadow-md text-sm sm:text-base"
+                    <label className="text-content text-gray-700 font-medium text-sm sm:text-lg">
+                      {question}
+                    </label>
+                    <input
+                      type="text"
+                      className="text-content p-3 sm:p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 shadow-sm hover:shadow-md text-sm sm:text-base"
                       placeholder="Your answer"
-                      value={(answers[selectedRole] && answers[selectedRole][index]) || ''}
-                      onChange={(e) => handleAnswerChange(index, e.target.value)}
+                      value={
+                        (answers[selectedRole] &&
+                          answers[selectedRole][index]) ||
+                        ""
+                      }
+                      onChange={(e) =>
+                        handleAnswerChange(index, e.target.value)
+                      }
                     />
                   </motion.div>
                 ))}
               </div>
-              
+
               {/* Back button when a role is selected - for mobile */}
               <motion.button
-                className="mt-6 py-2 px-5 bg-gray-500 text-white rounded-lg font-semibold transition-all duration-200"
+                className="text-content mt-6 py-2 px-5 bg-gray-500 text-white rounded-lg font-semibold transition-all duration-200"
                 whileHover={{ scale: 1.03 }} // Reduced scale
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setSelectedRole(null)}
@@ -280,13 +302,13 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
           )}
         </AnimatePresence>
       </div>
-      
+
       {/* Action buttons - only show when no role is selected */}
       {!selectedRole && (
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 md:mt-12 mb-4 sm:mb-8 relative w-full max-w-md justify-center items-center">
-          <div className="relative w-full sm:w-auto">
+          <div className="text-content relative w-full sm:w-auto">
             <motion.button
-              className="w-full sm:w-auto py-2 sm:py-3 px-6 sm:px-8 bg-red-600 text-white rounded-lg font-semibold transition-all duration-200"
+              className="text-content w-full sm:w-auto py-2 sm:py-3 px-6 sm:px-8 bg-red-600 text-white rounded-lg font-semibold transition-all duration-200"
               whileHover={{ scale: 1.03 }} // Reduced scale
               whileTap={{ scale: 0.97 }}
               onClick={onBack}
@@ -295,11 +317,11 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
             >
               Back
             </motion.button>
-            
+
             <AnimatePresence>
               {showBackWarning && (
-                <motion.div 
-                  className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 sm:-ml-12 bg-red-100 border border-red-400 text-red-600 px-3 sm:px-4 py-1 sm:py-2 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
+                <motion.div
+                  className="text-content absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 sm:-ml-12 bg-red-100 border border-red-400 text-red-600 px-3 sm:px-4 py-1 sm:py-2 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -310,26 +332,48 @@ const RoleSelection = withLoadTracking(({ onLoad, onBack, onSubmit, isSubmitting
               )}
             </AnimatePresence>
           </div>
-          
+
           <motion.button
-            className={`w-full sm:w-auto py-2 sm:py-3 px-6 sm:px-8 rounded-lg font-semibold shadow-lg transition-all duration-300 ${
-              appliedRoles.length > 0 
-              ? isSubmitting
-                ? 'bg-gradient-to-r from-green-400 to-teal-400 text-white cursor-wait' 
-                : 'bg-gradient-to-r from-green-500 to-teal-500 text-white hover:from-green-600 hover:to-teal-600' 
-              : 'bg-gray-400 text-gray-700 cursor-not-allowed'
+            className={`text-content w-full sm:w-auto py-2 sm:py-3 px-6 sm:px-8 rounded-lg font-semibold shadow-lg transition-all duration-300 ${
+              appliedRoles.length > 0
+                ? isSubmitting
+                  ? "bg-gradient-to-r from-green-400 to-teal-400 text-white cursor-wait"
+                  : "bg-gradient-to-r from-green-500 to-teal-500 text-white hover:from-green-600 hover:to-teal-600"
+                : "bg-gray-400 text-gray-700 cursor-not-allowed"
             }`}
-            whileHover={appliedRoles.length > 0 && !isSubmitting ? { scale: 1.03, boxShadow: "0px 8px 15px rgba(0,0,0,0.2)" } : {}} // Reduced scale
-            whileTap={appliedRoles.length > 0 && !isSubmitting ? { scale: 0.97 } : {}} // Adjusted scale
+            whileHover={
+              appliedRoles.length > 0 && !isSubmitting
+                ? { scale: 1.03, boxShadow: "0px 8px 15px rgba(0,0,0,0.2)" }
+                : {}
+            } // Reduced scale
+            whileTap={
+              appliedRoles.length > 0 && !isSubmitting ? { scale: 0.97 } : {}
+            } // Adjusted scale
             onClick={handleSubmit}
             disabled={appliedRoles.length === 0 || isSubmitting}
             transition={{ duration: 0.2 }} // Simplified transition
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                  className="animate-spin -ml-1 mr-2 h-5 w-5  text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
                 </svg>
                 {messageRef.current}
               </div>

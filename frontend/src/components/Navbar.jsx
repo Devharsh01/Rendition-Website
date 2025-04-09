@@ -187,7 +187,7 @@ const Navbar = withLoadTracking(({ onLoad }) => {
           handleClick("Form");
         }}
       >
-        Get In Touch
+       Be Dramatic!
       </button>
     </div>
   );

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Sail&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
 
 html,
 body {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
-
 
 .logo {
   height: 6em;
@@ -25,10 +25,18 @@ body {
   animation: blink 2s ease-in-out infinite;
 }
 
+.hindi-text {
+  font-family: "Laila", serif;
+  font-weight: 700;
+}
+
 .heading {
   font-family: "Playfair Display", serif;
 }
-
+.home-heading {
+  font-family: "Playfair Display", serif;
+  font-weight:bold;
+}
 .sub-heading {
   font-family: "Sail", system-ui;
 }

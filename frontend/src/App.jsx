@@ -94,9 +94,10 @@ function App() {
           <Home onLoad={incrementLoaded} />
 
           <Events onLoad={incrementLoaded} />
+          <Productions onLoad={incrementLoaded} />
           <Teachings onLoad={incrementLoaded} />
           <Team onLoad={incrementLoaded} />
-          <Productions onLoad={incrementLoaded} />
+
           <Form onLoad={incrementLoaded} />
           <Footer />
         </BrowserRouter>

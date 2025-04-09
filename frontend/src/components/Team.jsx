@@ -41,8 +41,9 @@ const Team = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Team"
-      className="relative w-screen h-max min-h-screen bg-black overflow-hidden"
+      className="relative w-screen h-max min-h-screen bg-black overflow-hidden p-6"
     >
+      
       <div className="absolute flex flex-col gap-[10px] pt-[10px] pointer-events-none">
         {imageChunks.map((imageChunk, rowIndex) => (
           <div
@@ -73,7 +74,7 @@ const Team = withLoadTracking(({ onLoad }) => {
         ))}
       </div>
       <div className="absolute inset-0 bg-black opacity-70"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080017] from-10% to-transparent to-60%"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#080017] from-5% to-transparent to-60%"></div>
       <div className="relative ">
         <motion.div
           className="flex flex-col md:flex-row justify-between round heading text-white p-10 font-bold text-4xl md:text-7xl leading-[1.3em]"
@@ -114,7 +115,7 @@ const Team = withLoadTracking(({ onLoad }) => {
                     <div className="mt-8 sub-heading text-4xl lg:text-6xl text-transparent font-bold bg-clip-text bg-gradient-to-t from-[#FF0033] to-[#FF4D70]">
                       Coordinators
                     </div>
-                    <div className="flex flex-col justify-center h-max p-3 mt-2 w-full md:w-max">
+                    <div className="flex flex-col justify-center h-max p-3 mt-2 w-full md:w-max gap-3">
                       <div
                         key={index}
                         className="relative inset-0 flex flex-wrap md:flex-col gap-4 md:gap-2"
@@ -122,7 +123,7 @@ const Team = withLoadTracking(({ onLoad }) => {
                         {/* Coordinators' Photos */}
                         {item.coordinators_photo.map((photo, photoIndex) => (
                           <motion.div
-                            className="text-content inset-0 flex flex-row items-center justify-start text-white gap-5"
+                            className="text-content inset-0 flex flex-row items-center justify-start text-white gap-5 p-4"
                             key={photoIndex}
                           >
                             <img
@@ -155,7 +156,7 @@ const Team = withLoadTracking(({ onLoad }) => {
                   <img
                     src={item.team_photo}
                     alt=""
-                    className={`w-[90%] md:w-[80%] lg:w-2/3 object-cover rounded-lg ${
+                    className={`w-[90%] md:w-[80%] lg:w-11/12 object-cover rounded-lg ${
                       imageLoader ? "hidden" : ""
                     }`}
                     id="group-image"
@@ -166,6 +167,8 @@ const Team = withLoadTracking(({ onLoad }) => {
             )
         )}
       </div>
+      
+      
     </div>
   );
 });
