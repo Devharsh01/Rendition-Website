@@ -65,7 +65,7 @@ const Home = withLoadTracking(({ onLoad }) => {
           </div>
         </motion.div>
       </div>
-      <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,0.98)] from-5% to-transparent to-60%"></div>
+      <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,0.98)] from-5% to-transparent to-40%"></div>
     </div>
   );
 });

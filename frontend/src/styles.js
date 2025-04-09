@@ -11,5 +11,5 @@ const styles = {
   headingShadow:
     "absolute text-6xl sm:text-8xl home-heading font-semibold tracking-widest text-[#100030]",
 };
-  
-  export { styles };
+
+export { styles };

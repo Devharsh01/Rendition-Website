@@ -152,8 +152,12 @@ const Techings = withLoadTracking(({ onLoad }) => {
   };
 
   return (
-    <div id="Teachings" className="sticky top-0 w-full">
+    <div
+      id="Teachings"
+      className="sticky top-0 w-full bg-gradient-to-br from-[#000000] via-[#1d002d] to-[#000000]"
+    >
       {/* Spotlight effect */}
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(83, 62, 125, 0.1),transparent_70%)]"></div>
       <div className="heading text-white bg-[#080017] p-10 font-bold text-4xl sm:text-7xl leading-[1.3em] ">
         <motion.div
