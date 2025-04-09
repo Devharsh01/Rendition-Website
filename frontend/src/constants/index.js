@@ -30,13 +30,20 @@ const assets = {
         peace: peace
     },
     events: {
-        abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Event1_bfydd6.jpg',
-        club_intro: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event2_zjfuoq.jpg',
-        out_station: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event3_ey0atx.jpg',
-        rubaroo: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107185/Rubaroo_igufap.png',
-        vivacity: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Vivacity_pdxili.jpg',
-        odeum: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Odeum_ijjklg.jpg',
-        reelMaking: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Reel_Making_lrtjnu.jpg',
+        // abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Event1_bfydd6.jpg',
+        // club_intro: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event2_zjfuoq.jpg',
+        // out_station: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event3_ey0atx.jpg',
+        // rubaroo: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107185/Rubaroo_igufap.png',
+        // vivacity: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Vivacity_pdxili.jpg',
+        // odeum: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Odeum_ijjklg.jpg',
+        // reelMaking: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Reel_Making_lrtjnu.jpg',
+        // abhinay: "assets/abhinay.jpg",
+        // club_intro: 'assets/club-intro.jpg',
+        // out_station: 'assets/outstation.jpg',
+        // rubaroo: 'assets/Rubaroo.jpg',
+        // vivacity: 'assets/Vivacity.jpeg',
+        // odeum: 'assets/odeum1.jpg',
+        // reelMaking: 'assets/Reel_Making.jpeg',
     },
     background_images: {
         image1: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121048/1_koya7h.jpg',
@@ -167,49 +174,49 @@ const emotions = [
 
 const events = [
     {
-        image: assets.events.abhinay,
+        image: abhinay,
         author: "Rendition",
         title: "Events",
         topic: "Abhinay",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.club_intro,
+        image: club_intro,
         author: "Rendition",
         title: "Events",
         topic: "Club-Intro",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.reelMaking,
+        image: reelMaking,
         author: "Rendition",
         title: "Events",
         topic: "Reel Making Competition",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.rubaroo,
+        image: rubaroo,
         author: "Rendition",
         title: "Events",
         topic: "Rubaroo",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.out_station,
+        image: out_station,
         author: "Rendition",
         title: "Events",
         topic: "Out-Station",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.vivacity,
+        image: vivacity,
         author: "Rendition",
         title: "Events",
         topic: "Vivacity",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: assets.events.odeum,
+        image: odeum,
         author: "Rendition",
         title: "Events",
         topic: "Odeum",
