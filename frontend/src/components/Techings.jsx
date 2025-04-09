@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react'
 import { emotions } from '../constants'
 import './CSS/Teaching.css'
@@ -8,143 +9,152 @@ import { TextPlugin } from 'gsap/all'
 import { textVariant } from '../utils/motion'
 import { withLoadTracking } from './withLoadTracking'
 
-const Techings = withLoadTracking(({onLoad}) => {
+
+const Techings = withLoadTracking(({ onLoad }) => {
   gsap.registerPlugin(TextPlugin);
   const animationRef = useRef(null);
-  
-  const extendedEmotions = [...emotions, ...emotions]
+
+  const extendedEmotions = [...emotions, ...emotions];
   const [hovered, setHovered] = useState(-1);
   const [selected, setSelected] = useState(null);
-  const [animationStartTime, setAnimationStartTime] = useState(performance.now());
+  const [animationStartTime, setAnimationStartTime] = useState(
+    performance.now()
+  );
   const [currentTime, setCurrentTime] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const animationDuration = 100000;
 
-  useEffect(()=>{
+  useEffect(() => {
     setAnimationStartTime(performance.now());
-  },[])
+  }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key === 'Escape' && selected ) {
+      if (event.key === "Escape" && selected) {
         handleClose();
       }
     };
-    window.addEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
 
-    if(selected) {
-      gsap.to('.enlarged-description', {
+    if (selected) {
+      gsap.to(".enlarged-description", {
         duration: 2,
         text: {
-          value: extendedEmotions[selected].description
+          value: extendedEmotions[selected].description,
         },
         delay: 1,
-      })
+      });
     }
 
     return () => {
-      window.removeEventListener('keydown', handleKeyPress);
+      window.removeEventListener("keydown", handleKeyPress);
     };
-  },[selected])
+  }, [selected]);
 
   const moveForward = () => {
-    if(animationRef.current && !isAnimating) {
+    if (animationRef.current && !isAnimating) {
       // Set animating state to prevent multiple clicks
       setIsAnimating(true);
-      
+
       // Get the current animation state
       const elapsed = performance.now() - animationStartTime;
       const currentPosition = (elapsed % animationDuration) / 1000;
       const targetPosition = currentPosition + 7; // Add 7 seconds
-      
+
       // Pause the current animation
-      animationToggle('paused');
-      
+      animationToggle("paused");
+
       // Create a GSAP animation to smoothly transition to the target position
       gsap.to(animationRef.current, {
         duration: 1, // Duration of the smooth transition
-        onUpdate: function() {
+        onUpdate: function () {
           // Calculate the interpolated position during the transition
           const progress = this.progress();
-          const newPosition = currentPosition + (progress * 7);
-          
+          const newPosition = currentPosition + progress * 7;
+
           // Apply the new position
-          animationRef.current.style.animation = 'none';
+          animationRef.current.style.animation = "none";
           void animationRef.current.offsetWidth; // Trigger reflow
-          animationRef.current.style.animation = `autoRun ${animationDuration/1000}s linear infinite`;
+          animationRef.current.style.animation = `autoRun ${
+            animationDuration / 1000
+          }s linear infinite`;
           animationRef.current.style.animationDelay = `-${newPosition}s`;
         },
-        onComplete: function() {
+        onComplete: function () {
           // Update the animation start time for future calculations
-          setAnimationStartTime(performance.now() - (targetPosition * 1000));
-          animationToggle('running');
+          setAnimationStartTime(performance.now() - targetPosition * 1000);
+          animationToggle("running");
           // Release the animation lock
           setIsAnimating(false);
-        }
+        },
       });
     }
   };
-  
+
   // Updated moveBackward function with animation lock
   const moveBackward = () => {
-    if(animationRef.current && !isAnimating) {
+    if (animationRef.current && !isAnimating) {
       // Set animating state to prevent multiple clicks
       setIsAnimating(true);
-      
+
       // Get the current animation state
       const elapsed = performance.now() - animationStartTime;
       const currentPosition = (elapsed % animationDuration) / 1000;
       const targetPosition = Math.max(0, currentPosition - 7); // Subtract 7 seconds, but don't go below 0
-      
+
       // Pause the current animation
-      animationToggle('paused');
-      
+      animationToggle("paused");
+
       // Create a GSAP animation to smoothly transition to the target position
       gsap.to(animationRef.current, {
         duration: 1, // Duration of the smooth transition
-        onUpdate: function() {
+        onUpdate: function () {
           // Calculate the interpolated position during the transition
           const progress = this.progress();
-          const newPosition = currentPosition - (progress * 7);
-          
+          const newPosition = currentPosition - progress * 7;
+
           // Apply the new position
-          animationRef.current.style.animation = 'none';
+          animationRef.current.style.animation = "none";
           void animationRef.current.offsetWidth; // Trigger reflow
-          animationRef.current.style.animation = `autoRun ${animationDuration/1000}s linear infinite`;
+          animationRef.current.style.animation = `autoRun ${
+            animationDuration / 1000
+          }s linear infinite`;
           animationRef.current.style.animationDelay = `-${newPosition}s`;
         },
-        onComplete: function() {
+        onComplete: function () {
           // Update the animation start time for future calculations
-          setAnimationStartTime(performance.now() - (targetPosition * 1000));
-          animationToggle('running');
+          setAnimationStartTime(performance.now() - targetPosition * 1000);
+          animationToggle("running");
           // Release the animation lock
           setIsAnimating(false);
-        }
+        },
       });
     }
   };
 
   const handleClose = () => {
-    let ele = document.getElementById('enlarged');
-    if(ele) {
-      ele.classList.add('closeAnimation')
-      setTimeout(()=>{
-        ele.classList.remove('closeAnimation')
+    let ele = document.getElementById("enlarged");
+    if (ele) {
+      ele.classList.add("closeAnimation");
+      setTimeout(() => {
+        ele.classList.remove("closeAnimation");
         setSelected(null);
-        animationToggle('running')
-      },1000)
+        animationToggle("running");
+      }, 1000);
     }
-  }
+  };
 
   const animationToggle = (state) => {
-    let ele = document.getElementById('circle')
-    if(ele) {
+    let ele = document.getElementById("circle");
+    if (ele) {
       ele.style.animationPlayState = state;
     }
-  }
+  };
 
   return (
     <div id="Teachings" className="sticky top-0 w-full">
+      {/* Spotlight effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(83, 62, 125, 0.1),transparent_70%)]"></div>
       <div className="heading text-white bg-[#080017] p-10 font-bold text-4xl sm:text-7xl leading-[1.3em] ">
         <motion.div
           className={`title font-bold text-4xl sm:text-7xl leading-[1.3em] `}
@@ -168,9 +178,9 @@ const Techings = withLoadTracking(({onLoad}) => {
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 bg-[#080017] opacity-80"></div>
+            <div className="absolute inset-0 bg-[#080017] opacity-90"></div>
             <h6
-              className="absolute z-10 text-3xl text-slate-400 left-[85%] md:left-[95%] pr-4 pt-2 transition-all duration-500 hover:text-white hover:cursor-pointer"
+              className="my-6 -mx-3 text-content absolute z-10 text-3xl text-slate-400 left-[85%] md:left-[95%] pr-4 pt-2 transition-all duration-500 hover:text-white hover:cursor-pointer"
               onClick={() => {
                 handleClose();
               }}
@@ -184,12 +194,12 @@ const Techings = withLoadTracking(({onLoad}) => {
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
             >
-              <h1 className="text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="hindi-text text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl my-6">
                 {extendedEmotions[selected].name}
               </h1>
             </motion.div>
             <div className="relative h-full md:h-auto flex flex-col-reverse md:flex-row justify-around md:justify-center items-center p-10 gap-4">
-              <div className="enlarged-description w-full md:w-[40%] text-white text-lg md:text-xl lg:text-2xl"></div>
+              <div className=" text-content enlarged-description w-full md:w-[40%] text-white text-lg md:text-xl lg:text-2xl"></div>
               <div className="relative w-full md:w-[60%] flex flex-row -top-[5%] ">
                 <img
                   src={Object.values(extendedEmotions[selected].images)[0]}
@@ -278,7 +288,7 @@ const Techings = withLoadTracking(({onLoad}) => {
                   animationToggle("paused");
                 }}
               >
-                <div className="text-content absolute text-white z-30 text-4xl w-full h-full flex justify-center items-center">
+                <div className="hindi-text absolute text-white z-30 text-4xl w-full h-full flex justify-center items-center">
                   <h1
                     className={`transition-all duration-500 ${
                       hovered === index ? "opacity-100" : "opacity-0"
@@ -300,6 +310,6 @@ const Techings = withLoadTracking(({onLoad}) => {
       </div>
     </div>
   );
-})
+});
 
-export default Techings
+export default Techings;
