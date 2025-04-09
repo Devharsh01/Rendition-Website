@@ -1,7 +1,7 @@
 import React from 'react';
-import RenditionLogo from '../assets/logo.png';
 
 const Preloader = ({percentage}) => {
+    const RenditionLogo = 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/logo_mvjweh.png'
     return (
 
         <div className="relative w-full max-w-2xl px-8 flex flex-col items-center justify-center space-y-8">

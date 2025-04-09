@@ -1,292 +1,233 @@
-import love from "../assets/love.png";
-import happy from "../assets/happy.png";
-import sad from "../assets/sadness.png";
-import courage from "../assets/courage.png";
-import anger from "../assets/anger.png";
-import disgust from "../assets/disgust.png";
-import terror from "../assets/terror.png";
-import surprise from "../assets/surprise.png";
-import peace from "../assets/peace.png";
-
-import Event1 from "../assets/Event1.jpg";
-import Event2 from "../assets/Event2.jpg";
-import Event3 from "../assets/Event3.jpg";
-import rubaroo from "../assets/Rubaroo.jpg";
-import vivacity from "../assets/Vivacity.jpeg";
-import odeum from "../assets/Odeum.jpeg";
-import reelMaking from "../assets/Reel_Making.jpeg";
-
-import image1 from "../assets/Background/1.jpg";
-import image2 from "../assets/Background/2.jpg";
-import image3 from "../assets/Background/3.jpg";
-import image4 from "../assets/Background/4.jpg";
-import image5 from "../assets/Background/5.jpg";
-import image6 from "../assets/Background/6.jpg";
-import image7 from "../assets/Background/7.jpg";
-import image8 from "../assets/Background/8.jpg";
-import image9 from "../assets/Background/9.jpg";
-import image10 from "../assets/Background/10.jpg";
-import image11 from "../assets/Background/11.jpg";
-import image12 from "../assets/Background/12.jpg";
-import image13 from "../assets/Background/13.jpg";
-import image14 from "../assets/Background/14.jpg";
-import image15 from "../assets/Background/15.jpg";
-import image16 from "../assets/Background/16.jpg";
-import image17 from "../assets/Background/17.jpg";
-import image18 from "../assets/Background/18.jpg";
-import image19 from "../assets/Background/19.jpg";
-import image20 from "../assets/Background/20.jpg";
-import image21 from "../assets/Background/21.jpg";
-import image22 from "../assets/Background/22.jpg";
-import image23 from "../assets/Background/23.jpg";
-import image24 from "../assets/Background/24.jpg";
-import image25 from "../assets/Background/25.jpg";
-import image26 from "../assets/Background/26.jpg";
-import image27 from "../assets/Background/27.jpg";
-import image28 from "../assets/Background/28.jpg";
-import image29 from "../assets/Background/29.jpg";
-import image30 from "../assets/Background/30.jpg";
-import image31 from "../assets/Background/31.jpg";
-import image32 from "../assets/Background/32.jpg";
-import image33 from "../assets/Background/33.jpg";
-import image34 from "../assets/Background/34.jpg";
-import image35 from "../assets/Background/35.jpg";
-import image36 from "../assets/Background/36.jpg";
-import image37 from "../assets/Background/37.jpg";
-import image38 from "../assets/Background/38.jpg";
-import image39 from "../assets/Background/39.jpg";
-import image40 from "../assets/Background/40.jpg";
-import image41 from "../assets/Background/41.jpg";
-import image42 from "../assets/Background/42.jpg";
-import image43 from "../assets/Background/43.jpg";
-import image44 from "../assets/Background/44.jpg";
-import image45 from "../assets/Background/45.jpg";
-import image46 from "../assets/Background/46.jpg";
-import image47 from "../assets/Background/47.jpg";
-import image48 from "../assets/Background/48.jpg";
-import image49 from "../assets/Background/49.jpg";
-import image50 from "../assets/Background/50.jpg";
-
-import shivang from "../assets/Shivang_sir.png";
-import ananya from "../assets/Ananya_Boss.png";
-import aanchal from "../assets/Aanchal_Boss.png";
-import maitreyee from "../assets/Maitreyee.png";
-import sanyam from "../assets/Sanyam.png";
-import mohit from "../assets/Mohit.png";
-import harshita from "../assets/Harshita.png";
-import devansh from "../assets/Devansh.png";
-import rahul from "../assets/Rahul.png";
-import y21_team from "../assets/Y21_Team.jpg";
-import y22_team from "../assets/Y22_Team.jpg";
-import y23_team from "../assets/Y23_Team.jpg";
-import { Productions } from "../components";
+const assets = {
+    emotions: {
+        love: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/love_r9uimb.png',
+        happy: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/happy_svbujo.png',
+        sad: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/sadness_rpi114.png',
+        courage: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/courage_r7xghv.png',
+        anger: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/anger_jy1rw2.png',
+        disgust: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/disgust_bqdhrs.png',
+        terror: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/terror_fp1ayw.png',
+        surprise: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/surprise_aekmvs.png',
+        peace: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/peace_evtmgy.png',
+    },
+    events: {
+        abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Event1_bfydd6.jpg',
+        club_intro: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event2_zjfuoq.jpg',
+        out_station: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event3_ey0atx.jpg',
+        rubaroo: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107185/Rubaroo_igufap.png',
+        vivacity: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Vivacity_pdxili.jpg',
+        odeum: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Odeum_ijjklg.jpg',
+        reelMaking: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Reel_Making_lrtjnu.jpg',
+    },
+    background_images: {
+        image1: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121048/1_koya7h.jpg',
+        image2: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121081/2_fcj4xn.jpg',
+        image3: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121082/3_vkz8n0.jpg',
+        image4: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121083/4_bwerev.jpg',
+        image5: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121084/5_gac4mm.jpg',
+        image6: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121084/6_nz3ofa.jpg',
+        image7: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121085/7_hclyua.jpg',
+        image8: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121086/8_jwka1g.jpg',
+        image9: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121087/9_nkkexz.jpg',
+        image10: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121088/10_kvlrhv.jpg',
+        image11: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121089/11_use93q.jpg',
+        image12: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121090/12_uvrpu1.jpg',
+        image13: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121092/13_j59pyv.jpg',
+        image14: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121092/14_pnjiqz.jpg',
+        image15: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121094/15_aupehm.jpg',
+        image16: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121095/16_behahg.jpg',
+        image17: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121096/17_ajwluw.jpg',
+        image18: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121097/18_ftpxmh.jpg',
+        image19: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121099/19_rhnp7h.jpg',
+        image20: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121099/20_nnmzjo.jpg',
+        image21: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121101/21_ofwbji.jpg',
+        image22: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121102/22_bd1jwz.jpg',
+        image23: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121104/23_wwec8u.jpg',
+        image24: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121105/24_nx2b6j.jpg',
+        image25: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121106/25_svv1eu.jpg',
+        image26: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121107/26_zn3gt1.jpg',
+        image27: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121108/27_pnndhg.jpg',
+        image28: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121111/28_p7ihuw.jpg',
+        image29: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121111/29_szgqlo.jpg',
+        image30: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121112/30_uqvbsi.jpg',
+        image31: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121116/31_s64azf.jpg',
+        image32: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121119/32_ki0iew.jpg',
+        image33: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121120/33_tf4sg9.jpg',
+        image34: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121123/34_xtflbo.jpg',
+        image35: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121124/35_yyzitn.jpg',
+        image36: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121127/36_zoybq2.jpg',
+        image37: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121127/37_hre3lm.jpg',
+        image38: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121143/38_dlb8kl.jpg',
+        image39: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121143/39_x9xa83.jpg',
+        image40: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121147/40_ufsmbc.jpg',
+        image41: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121150/41_sgvqf9.jpg',
+        image42: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121152/42_tzx8a8.jpg',
+        image43: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121152/43_jnfpfx.jpg',
+        image44: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121156/44_ef6ijl.jpg',
+        image45: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121157/45_nspfbh.jpg',
+        image46: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121159/46_devr79.jpg',
+        image47: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121164/47_fztqxn.jpg',
+        image48: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121165/48_wljdkq.jpg',
+        image49: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121170/49_oyhq2r.jpg',
+        image50: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121171/50_veen2s.jpg'
+    },
+    team: {
+        shivang: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Shivang_sir_xzdgtg.png',
+        ananya: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107174/Ananya_Boss_u7p502.png',
+        aanchal: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107174/Aanchal_Boss_eqavdi.png',
+        maitreyee: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Maitreyee_zs2q0f.png',
+        sanyam: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107185/Sanyam_q6rmdw.png',
+        mohit: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Mohit_cotrsf.png',
+        harshita: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Harshita_zsazr0.png',
+        devansh: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107174/Devansh_qulz6q.png',
+        rahul: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Rahul_blwj7w.png',
+        y21_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Y21_Team_xxe8eu.jpg',
+        y22_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/Y22_Team_pv10kt.jpg',
+        y23_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/Y23_Team_ea5ysi.jpg',
+    }
+};
 
 const backend_URL = "https://rendition-backend.onrender.com";
 
 const emotions = [
-  {
-    name: "हास्य",
-    icon: happy,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Making People laugh their hearts out from our acting and bringing a wave of joyfulness in the air is what we excel at.",
-  },
-  {
-    name: "श्रृंगार",
-    icon: love,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Love is in the air and so, it's the most crucial to represent with proper energy and feelings",
-  },
-  {
-    name: "करुणा",
-    icon: sad,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Sadness is felt in the heart and grasping it on demand and showcasing it in front of thousands requires talent and adhereance.",
-  },
-  {
-    name: "रौद्र",
-    icon: anger,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Keeping your cool and still showing you anger is quite some skill",
-  },
-  {
-    name: "शांति",
-    icon: peace,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone wants some peace in their life and we showcase that to everyone.",
-  },
-  {
-    name: "शौर्य",
-    icon: courage,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone demands it yet only some have it. Courage is one of a major emotion to display.",
-  },
-  {
-    name: "अद्भुत",
-    icon: surprise,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Surprise is quite hard to display yet one of the best emotions displayed.",
-  },
-  {
-    name: "भयानक",
-    icon: terror,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Terror is born in the heart and travelled throughout the body in a flow of emotions.",
-  },
-  {
-    name: "बिभात्स्य",
-    icon: disgust,
-    images: { love, peace, disgust },
-    description:
-      "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. It can be from a thing or from a person or from anything. Disgust makes everyone doubt if they should do it or not.",
-  },
-];
+    {
+        name: "हास्य",
+        icon: assets.emotions.happy,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Making People laugh their hearts out from our acting and bringing a wave of joyfulness in the air is what we excel at."
+    },
+    {
+        name: "श्रृंगार",
+        icon: assets.emotions.love,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Love is in the air and so, it's the most crucial to represent with proper energy and feelings"
+    },
+    {
+        name: "करुणा",
+        icon: assets.emotions.sad,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Sadness is felt in the heart and grasping it on demand and showcasing it in front of thousands requires talent and adhereance."
+    },
+    {
+        name: "रौद्र",
+        icon: assets.emotions.anger,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Keeping your cool and still showing you anger is quite some skill"
+    },
+    {
+        name: "शांति",
+        icon: assets.emotions.peace,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone wants some peace in their life and we showcase that to everyone."
+    },
+    {
+        name: "शौर्य",
+        icon: assets.emotions.courage,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone demands it yet only some have it. Courage is one of a major emotion to display."
+    },
+    {
+        name: "अद्भुत",
+        icon: assets.emotions.surprise,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Surprise is quite hard to display yet one of the best emotions displayed."
+    },
+    {
+        name: "भयानक",
+        icon: assets.emotions.terror,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Terror is born in the heart and travelled throughout the body in a flow of emotions."
+    },
+    {
+        name: "बिभात्स्य",
+        icon: assets.emotions.disgust,
+        images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
+        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. It can be from a thing or from a person or from anything. Disgust makes everyone doubt if they should do it or not."
+    },
+]
 
 const events = [
-  {
-    image: Event1,
-    author: "Rendition",
-    title: "Events",
-    topic: "Abhinay",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: Event2,
-    author: "Rendition",
-    title: "Events",
-    topic: "Club-Intro",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: reelMaking,
-    author: "Rendition",
-    title: "Events",
-    topic: "Reel Making Competition",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: rubaroo,
-    author: "Rendition",
-    title: "Events",
-    topic: "Rubaroo",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: Event1,
-    author: "Rendition",
-    title: "Events",
-    topic: "Out-Station",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: vivacity,
-    author: "Rendition",
-    title: "Events",
-    topic: "Vivacity",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-  {
-    image: odeum,
-    author: "Rendition",
-    title: "Events",
-    topic: "Odeum",
-    description:
-      "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard",
-  },
-];
+    {
+        image: assets.events.abhinay,
+        author: "Rendition",
+        title: "Events",
+        topic: "Abhinay",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.club_intro,
+        author: "Rendition",
+        title: "Events",
+        topic: "Club-Intro",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.reelMaking,
+        author: "Rendition",
+        title: "Events",
+        topic: "Reel Making Competition",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.rubaroo,
+        author: "Rendition",
+        title: "Events",
+        topic: "Rubaroo",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.out_station,
+        author: "Rendition",
+        title: "Events",
+        topic: "Out-Station",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.vivacity,
+        author: "Rendition",
+        title: "Events",
+        topic: "Vivacity",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+    {
+        image: assets.events.odeum,
+        author: "Rendition",
+        title: "Events",
+        topic: "Odeum",
+        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+    },
+]
 
 const background_images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-  image12,
-  image13,
-  image14,
-  image15,
-  image16,
-  image17,
-  image18,
-  image19,
-  image20,
-  image21,
-  image22,
-  image23,
-  image24,
-  image25,
-  image26,
-  image27,
-  image28,
-  image29,
-  image30,
-  image31,
-  image32,
-  image33,
-  image34,
-  image35,
-  image36,
-  image37,
-  image38,
-  image39,
-  image40,
-  image41,
-  image42,
-  image43,
-  image44,
-  image45,
-  image46,
-  image47,
-  image48,
-  image49,
-  image50,
-];
+    assets.background_images.image1, assets.background_images.image2, assets.background_images.image3, assets.background_images.image4, assets.background_images.image5, assets.background_images.image6, assets.background_images.image7, assets.background_images.image8, assets.background_images.image9, assets.background_images.image10, assets.background_images.image11, assets.background_images.image12, assets.background_images.image13, assets.background_images.image14, assets.background_images.image15, assets.background_images.image16, assets.background_images.image17, assets.background_images.image18, assets.background_images.image19, assets.background_images.image20, assets.background_images.image21, assets.background_images.image22, assets.background_images.image23, assets.background_images.image24, assets.background_images.image25, assets.background_images.image26, assets.background_images.image27, assets.background_images.image28, assets.background_images.image29, assets.background_images.image30, assets.background_images.image31, assets.background_images.image32, assets.background_images.image33, assets.background_images.image34, assets.background_images.image35, assets.background_images.image36, assets.background_images.image37, assets.background_images.image38, assets.background_images.image39, assets.background_images.image40, assets.background_images.image41, assets.background_images.image42, assets.background_images.image43, assets.background_images.image44, assets.background_images.image45, assets.background_images.image46, assets.background_images.image47, assets.background_images.image48, assets.background_images.image49, assets.background_images.image50
+]
 
 const team = [
-  {
-    batch: "Y-21",
-    coordinators: ["Shivang Chauhan", "Ananya Khadria", "Aanchal Jain"],
-    coordinators_photo: [shivang, ananya, aanchal],
-    team_photo: y21_team,
-  },
-  {
-    batch: "Y-22",
-    coordinators: ["Maitreyee Kulkarni", "Mohit Soni", "Sanyam Munot"],
-    coordinators_photo: [maitreyee, mohit, sanyam],
-    team_photo: y22_team,
-  },
-  {
-    batch: "Y-23",
-    coordinators: ["Harshita Devnani", "Rahul Sharma", "Devansh Pareek"],
-    coordinators_photo: [harshita, rahul, devansh],
-    team_photo: y23_team,
-  },
-  {
-    batch: "Y-24",
-    coordinators: null,
-    coordinators_photo: [],
-    team_photo: y23_team,
-  },
-];
+    {
+        batch: "Y-21",
+        coordinators: ["Shivang Chauhan", "Ananya Khadria", "Aanchal Jain"],
+        coordinators_photo: [assets.team.shivang, assets.team.ananya, assets.team.aanchal],
+        team_photo: assets.team.y21_team
+    },
+    {
+        batch: "Y-22",
+        coordinators: ["Maitreyee Kulkarni", "Mohit Soni", "Sanyam Munot"],
+        coordinators_photo: [assets.team.maitreyee, assets.team.mohit, assets.team.sanyam],
+        team_photo: assets.team.y22_team
+    },
+    {
+        batch: "Y-23",
+        coordinators: ["Harshita Devnani", "Rahul Sharma", "Devansh Pareek"],
+        coordinators_photo: [assets.team.harshita, assets.team.rahul, assets.team.devansh],
+        team_photo: assets.team.y23_team
+    },
+    {
+        batch: "Y-24",
+        coordinators: null,
+        coordinators_photo: [],
+        team_photo: assets.team.y23_team
+    },
+]
 
 // Add New Acts in Sequence only
 const acts = [

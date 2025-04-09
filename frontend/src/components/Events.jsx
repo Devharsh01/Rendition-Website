@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { events } from "../constants";
-import { motion, steps } from "framer-motion";
-import { textVariant } from "../constants/utils/motion";
-import "./CSS/Events.css";
-import { withLoadTracking } from "./withLoadTracking";
+import React, { useEffect, useState } from 'react'
+import {events} from '../constants'
+import { motion, steps } from 'framer-motion'
+import { textVariant } from '../utils/motion'
+import './CSS/Events.css'
+import { withLoadTracking } from './withLoadTracking'
 
 const Events = withLoadTracking(({ onLoad }) => {
   const [isTransitioning, setIsTransitioning] = useState(false);

@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import logo from "../assets/logo.png";
-import { fadeIn } from "../constants/utils/motion";
-import { motion } from "framer-motion";
-import { withLoadTracking } from "./withLoadTracking";
+import React, { useEffect, useRef, useState } from 'react'
+import { fadeIn } from '../utils/motion';
+import { motion } from 'framer-motion';
+import { withLoadTracking } from './withLoadTracking'
 
 const pages = ["Home", "Emotions", "Events", "Team", "Productions"];
 
@@ -11,6 +10,7 @@ const Navbar = withLoadTracking(({ onLoad }) => {
   const [selected, setSelected] = useState("Home");
   const [isScrolled, setIsScrolled] = useState(false);
   const prevScrollRef = useRef(0);
+  const logo = 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/logo_mvjweh.png'
 
   const handleClick = (props) => {
     setSelected(props);
