@@ -107,7 +107,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                     {item.title}
                   </motion.div>
                   <motion.div
-                    className={`sub-heading topic font-bold text-9xl leading-[1.3em] text-[#FF0033]`}
+                    className={`sub-heading topic font-bold text-7xl leading-[1.3em] text-[#FF0033]`}
                     variants={textVariant(0.4)}
                     initial="hidden"
                     whileInView="show"
@@ -144,8 +144,9 @@ const Events = withLoadTracking(({ onLoad }) => {
                     alt=""
                     className="w-full h-full object-cover rounded-lg"
                   />
-                  <div className="content absolute inset-[10px] top-3/4 ">
-                    <div className="text-content title font-bold">
+                   <div className="absolute inset-0  bg-gradient-to-b from-[#190E30] opacity-100  z-10" />
+                  <div className="content absolute inset-[10px]  z-20 flex items-center justify-center p-2">
+                    <div className="text-content title font-bold text-center text-xl">
                       {item.topic}
                     </div>
                   </div>
