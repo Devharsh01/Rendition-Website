@@ -74,13 +74,12 @@ const Productions = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Productions"
-      className="relative bg-gradient-to-br from-[#000000] via-[#1d002d] to-[#000000] w-full h-auto overflow-hidden flex flex-col p-4"
+      className="relative bg-gradient-to-br bg-[#080017] w-full h-auto overflow-hidden flex flex-col p-4"
     >
-      <div className="absolute w-full inset-0 bg-gradient-to-b from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div>
-      <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div>
       {/* Spotlight effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(83, 62, 125, 0.1),transparent_70%)]"></div>
+      <div className="absolute w-full h-full inset-0 bg-[radial-gradient(ellipse_at_60%_40%,_#4d000f_1%,_transparent_45%)]"></div>
 
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(83, 62, 125, 0.1),transparent_70%)]"></div>
       <motion.div
         className="flex flex-col sm:flex-row justify-between heading text-white p-6 md:p-8"
         variants={textVariant(0)}
