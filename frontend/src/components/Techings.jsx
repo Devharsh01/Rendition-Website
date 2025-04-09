@@ -144,8 +144,9 @@ const Techings = withLoadTracking(({onLoad}) => {
   }
 
   return (
-    <div id="Teachings" className="sticky top-0 w-full">
-      <div className="heading text-white bg-[#080017] p-10 font-bold text-4xl sm:text-7xl leading-[1.3em] ">
+    // bg-[#080017]
+    <div id="Emotions" className="sticky top-0 w-full">
+      <div className="heading text-white bg-gradient-to-r from-[#080017] from-50% to-black to-90%  p-10 font-bold text-4xl sm:text-7xl leading-[1.3em] ">
         <motion.div
           className={`title font-bold text-4xl sm:text-7xl leading-[1.3em] `}
           variants={textVariant(0)}
@@ -279,8 +280,11 @@ const Techings = withLoadTracking(({onLoad}) => {
                 }}
               >
                 <div className="text-content absolute text-white z-30 text-4xl w-full h-full flex justify-center items-center">
+                  <div className={`transition-all duration-500 bg-black absolute h-full w-full ${
+                      hovered === index ? "opacity-50" : "opacity-0"
+                    }`}></div>
                   <h1
-                    className={`transition-all duration-500 ${
+                    className={`transition-all duration-500 z-30 ${
                       hovered === index ? "opacity-100" : "opacity-0"
                     }`}
                   >

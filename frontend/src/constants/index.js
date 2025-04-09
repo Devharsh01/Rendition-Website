@@ -1,14 +1,33 @@
+import love from '../assets/Shringar.jpeg'
+import happy from '../assets/Hasya.jpeg'
+import sad from '../assets/Karuna.jpeg'
+import courage from '../assets/Veera.jpeg'
+import anger from '../assets/Rudra.jpeg'
+import disgust from '../assets/Bibhatsa.jpeg'
+import terror from '../assets/Bhayanka.jpeg'
+import surprise from '../assets/Adbhut.jpeg'
+import peace from '../assets/Shanti.jpeg'
+
 const assets = {
     emotions: {
-        love: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/love_r9uimb.png',
-        happy: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/happy_svbujo.png',
-        sad: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/sadness_rpi114.png',
-        courage: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/courage_r7xghv.png',
-        anger: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/anger_jy1rw2.png',
-        disgust: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/disgust_bqdhrs.png',
-        terror: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/terror_fp1ayw.png',
-        surprise: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/surprise_aekmvs.png',
-        peace: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/peace_evtmgy.png',
+        // love: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/love_r9uimb.png',
+        // happy: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/happy_svbujo.png',
+        // sad: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/sadness_rpi114.png',
+        // courage: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/courage_r7xghv.png',
+        // anger: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/anger_jy1rw2.png',
+        // disgust: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/disgust_bqdhrs.png',
+        // terror: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/terror_fp1ayw.png',
+        // surprise: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/surprise_aekmvs.png',
+        // peace: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/peace_evtmgy.png',
+        love: love,
+        happy: happy,
+        sad: sad,
+        courage: courage,
+        anger: anger,
+        disgust: disgust, 
+        terror: terror,
+        surprise: surprise,
+        peace: peace
     },
     events: {
         abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Event1_bfydd6.jpg',
