@@ -33,6 +33,7 @@ const Home = withLoadTracking(({ onLoad }) => {
         className="absolute inset-0 h-full w-full object-cover"
         alt=""
       />
+
       <div
         className="relative flex items-center justify-center flex-col z-0"
         id="mainHeading"
@@ -55,7 +56,7 @@ const Home = withLoadTracking(({ onLoad }) => {
             <p className="text-zinc-600 font-thick text-base sm:text-lg ">
               _________
             </p>
-            <h1 className="heading text-3xl sm:text-5xl pt-[10px] font-normal text-[#B20024]">
+            <h1 className="heading text-3xl sm:text-5xl pt-[10px] text-transparent bg-clip-text bg-gradient-to-t from-[#e34a69] to-[#ff0436]">
               The Theatre Club
             </h1>
             <p className="text-zinc-600 font-thick text-base sm:text-lg ">
@@ -64,6 +65,7 @@ const Home = withLoadTracking(({ onLoad }) => {
           </div>
         </motion.div>
       </div>
+      <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,0.98)] from-5% to-transparent to-40%"></div>
     </div>
   );
 });

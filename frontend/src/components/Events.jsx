@@ -70,7 +70,9 @@ const Events = withLoadTracking(({ onLoad }) => {
 
   return (
     <div id="Events">
+      
       <div className="carousel relative w-screen h-screen overflow-hidden">
+        
         <div className="list">
           {events.map((item, index) => {
             return (
@@ -80,6 +82,8 @@ const Events = withLoadTracking(({ onLoad }) => {
                   alt=""
                   className={`w-full h-full object-cover `}
                 />
+                {/* <div className="absolute w-full inset-0 bg-gradient-to-b from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div>
+                <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div> */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#080017] from-10% to-transparent to-60%"></div>
                 <div
                   className={`details absolute top-20 w-[1140px] max-w-screen-sm left-8 md:left-28 pr-80 sm:pr-28 box-border text-white text-shadow-custom`}

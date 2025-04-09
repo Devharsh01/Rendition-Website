@@ -110,55 +110,55 @@ const backend_URL = "https://rendition-backend.onrender.com";
 
 const emotions = [
     {
-        name: "Hasya",
+        name: "हास्य",
         icon: assets.emotions.happy,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Making People laugh their hearts out from our acting and bringing a wave of joyfulness in the air is what we excel at."
     },
     {
-        name: "Shringar",
+        name: "श्रृंगार",
         icon: assets.emotions.love,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Love is in the air and so, it's the most crucial to represent with proper energy and feelings"
     },
     {
-        name: "Karuna",
+        name: "करुणा",
         icon: assets.emotions.sad,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Sadness is felt in the heart and grasping it on demand and showcasing it in front of thousands requires talent and adhereance."
     },
     {
-        name: "Rudra",
+        name: "रौद्र",
         icon: assets.emotions.anger,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Keeping your cool and still showing you anger is quite some skill"
     },
     {
-        name: "Shanti",
+        name: "शांति",
         icon: assets.emotions.peace,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone wants some peace in their life and we showcase that to everyone."
     },
     {
-        name: "Shourya",
+        name: "शौर्य",
         icon: assets.emotions.courage,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone demands it yet only some have it. Courage is one of a major emotion to display."
     },
     {
-        name: "Adbhut",
+        name: "अद्भुत",
         icon: assets.emotions.surprise,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Surprise is quite hard to display yet one of the best emotions displayed."
     },
     {
-        name: "Bhayank",
+        name: "भयानक",
         icon: assets.emotions.terror,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Terror is born in the heart and travelled throughout the body in a flow of emotions."
     },
     {
-        name: "Bhibhatsya",
+        name: "बिभात्स्य",
         icon: assets.emotions.disgust,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
         description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. It can be from a thing or from a person or from anything. Disgust makes everyone doubt if they should do it or not."
