@@ -73,7 +73,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Productions"
-      className="relative bg-gradient-to-br bg-[#080017] w-full h-auto overflow-hidden flex flex-col p-4"
+      className="relative bg-gradient-to-br bg-[#080017] w-full h-auto overflow-hidden flex flex-col -mt-12 p-0 p-4"
     >
       {/* Spotlight effect */}
       <div className="absolute w-full h-full inset-0 bg-[radial-gradient(ellipse_at_60%_40%,_#4d000f_1%,_transparent_45%)]"></div>
@@ -135,7 +135,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
         </div>
 
         {/* Main Content Area */}
-        <div className="relative flex-grow h-full md:w-3/4 overflow-hidden rounded-lg bg-transparent shadow-xl flex flex-col ">
+        <div className="relative flex-grow h-full md:w-3/4 rounded-lg bg-transparent shadow-xl flex flex-col ">
           <div className="absolute inset-0 bg-transparent pointer-events-none z-10 "></div>
 
           {/* Production Title Banner */}
@@ -181,7 +181,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
 
           {/* Navigation Buttons */}
           <motion.div
-            className="absolute text-white text-3xl sm:text-4xl left-0 top-1/2 translate-x-1 sm:translate-x-4 z-20"
+            className="absolute text-white top-[60%] sm:top-1/2 -translate-x-5 sm:translate-x-1 z-20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrevClick}
@@ -192,7 +192,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
           </motion.div>
 
           <motion.div
-            className="absolute text-white text-3xl sm:text-4xl right-0 top-1/2 -translate-x-1 sm:-translate-x-4 z-20"
+            className="absolute text-white right-0 top-[60%] sm:top-1/2 translate-x-5 sm:-translate-x-1 z-20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNextClick}
@@ -203,12 +203,12 @@ const Productions = withLoadTracking(({ onLoad }) => {
           </motion.div>
 
           {/* Sliding Pagination Dots */}
-          <div className="absolute flex items-center gap-1 bottom-4 left-0 justify-center w-full h-auto z-20">
-            <div className="flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-[#100030]/40 backdrop-blur-sm">
+          <div className="absolute flex items-center gap-1 -bottom-4 md:bottom-4 left-0 justify-center w-full h-auto z-20">
+            <div className="flex items-center justify-center gap-2 py-2 px-2 md:px-4 rounded-full bg-[#100030]/40 backdrop-blur-sm">
               {/* Show left arrow when scrolled from beginning */}
               {visibleDotIndices[0] > 0 && (
                 <button
-                  className="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white"
+                  className="w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center text-gray-400 hover:text-white"
                   onClick={() =>
                     setCurrentIndex(Math.max(0, visibleDotIndices[0] - 1))
                   }
@@ -221,7 +221,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
               {visibleDotIndices.map((index) => (
                 <motion.button
                   key={index}
-                  className={`relative w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
+                  className={`relative w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ease-in-out ${
                     currentIndex === index
                       ? "scale-100 bg-gradient-to-r from-[#FF0033] to-[#FF4D70] shadow-lg shadow-red-500/50"
                       : "bg-gray-600 hover:bg-gray-500"
@@ -243,7 +243,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
               {visibleDotIndices[visibleDotIndices.length - 1] <
                 acts.length - 1 && (
                 <button
-                  className="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white"
+                  className="w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center text-gray-400 hover:text-white"
                   onClick={() =>
                     setCurrentIndex(
                       Math.min(

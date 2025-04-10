@@ -7,9 +7,9 @@ const styles = {
     "bg-gradient-to-t from-red-600 to-brown-600 bg-clip-text text-transparent",
 
   headingFont:
-    "relative text-6xl sm:text-8xl home-heading font-semibold tracking-widest text-transparent bg-clip-text bg-gradient-to-t from-[#979699] to-[#FBFAFF] -top-1 right-1",
+    "relative text-4xl sm:text-6xl md:text-7xl 2xl:text-9xl home-heading font-semibold tracking-widest text-transparent bg-clip-text bg-gradient-to-t from-[#979699] to-[#FBFAFF] -top-[2px] right-[3px] sm:-top-1 sm:right-1",
   headingShadow:
-    "absolute text-6xl sm:text-8xl home-heading font-semibold tracking-widest text-[#100030]",
+    "absolute text-4xl sm:text-6xl md:text-7xl 2xl:text-9xl home-heading font-semibold tracking-widest text-[#100030]",
 };
 
 export { styles };

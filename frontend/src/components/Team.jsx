@@ -41,7 +41,7 @@ const Team = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Team"
-      className="relative w-screen h-max min-h-screen bg-black overflow-hidden p-6"
+      className="relative w-screen h-max min-h-screen bg-black overflow-hidden p-6 pt-2"
     >
       
       <div className="absolute flex flex-col gap-[10px] pt-[10px] pointer-events-none">

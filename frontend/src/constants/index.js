@@ -1,49 +1,24 @@
-import love from '../assets/Shringar.jpeg'
-import happy from '../assets/Hasya.jpeg'
-import sad from '../assets/Karuna.jpeg'
-import courage from '../assets/Veera.jpeg'
-import anger from '../assets/Rudra.jpeg'
-import disgust from '../assets/Bibhatsa.jpeg'
-import terror from '../assets/Bhayanka.jpeg'
-import surprise from '../assets/Adbhut.jpeg'
-import peace from '../assets/Shanti.jpeg'
 
 const assets = {
     emotions: {
-        // love: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/love_r9uimb.png',
-        // happy: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/happy_svbujo.png',
-        // sad: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/sadness_rpi114.png',
-        // courage: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/courage_r7xghv.png',
-        // anger: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/anger_jy1rw2.png',
-        // disgust: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/disgust_bqdhrs.png',
-        // terror: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/terror_fp1ayw.png',
-        // surprise: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/surprise_aekmvs.png',
-        // peace: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/peace_evtmgy.png',
-        love: love,
-        happy: happy,
-        sad: sad,
-        courage: courage,
-        anger: anger,
-        disgust: disgust, 
-        terror: terror,
-        surprise: surprise,
-        peace: peace
+        love: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236836/Shringar_b8drgc.jpg',
+        happy: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236835/Hasya_vcvxvq.jpg',
+        sad: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236836/Karuna_aq1yny.jpg',
+        courage: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236837/Veera_cwwxqn.jpg',
+        anger: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236836/Rudra_r22nap.jpg',
+        disgust: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236835/Bibhatsa_ynpmbt.jpg',
+        terror: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236835/Bhayanka_jsglpv.jpg',
+        surprise: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236835/Adbhut_ok3hfd.jpg',
+        peace: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744236836/Shanti_firvdx.jpg'
     },
     events: {
-        // abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Event1_bfydd6.jpg',
-        // club_intro: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event2_zjfuoq.jpg',
-        // out_station: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107175/Event3_ey0atx.jpg',
-        // rubaroo: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107185/Rubaroo_igufap.png',
-        // vivacity: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Vivacity_pdxili.jpg',
-        // odeum: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107177/Odeum_ijjklg.jpg',
-        // reelMaking: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Reel_Making_lrtjnu.jpg',
-        // abhinay: "assets/abhinay.jpg",
-        // club_intro: 'assets/club-intro.jpg',
-        // out_station: 'assets/outstation.jpg',
-        // rubaroo: 'assets/Rubaroo.jpg',
-        // vivacity: 'assets/Vivacity.jpeg',
-        // odeum: 'assets/odeum1.jpg',
-        // reelMaking: 'assets/Reel_Making.jpeg',
+        abhinay: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236835/abhinay_cpfuki.jpg',
+        club_intro: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236836/club-intro_gxkklu.jpg',
+        out_station: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236835/outstation_tycmci.jpg',
+        rubaroo: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236837/Rubaroo_dit4ac.jpg',
+        vivacity: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236840/Vivacity_taylos.jpg',
+        odeum: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236835/odeum_xkgsjg.jpg',
+        reelMaking: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto,w_1024,c_limit/v1744236838/Reel_Making_sb0bvz.jpg'
     },
     background_images: {
         image1: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744121048/1_koya7h.jpg',
@@ -174,49 +149,49 @@ const emotions = [
 
 const events = [
     {
-        image: abhinay,
+        image: assets.events.abhinay,
         author: "Rendition",
         title: "Events",
         topic: "Abhinay",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: club_intro,
+        image: assets.events.club_intro,
         author: "Rendition",
         title: "Events",
         topic: "Club-Intro",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: reelMaking,
+        image: assets.events.reelMaking,
         author: "Rendition",
         title: "Events",
         topic: "Reel Making Competition",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: rubaroo,
+        image: assets.events.rubaroo,
         author: "Rendition",
         title: "Events",
         topic: "Rubaroo",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: out_station,
+        image: assets.events.out_station,
         author: "Rendition",
         title: "Events",
         topic: "Out-Station",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: vivacity,
+        image: assets.events.vivacity,
         author: "Rendition",
         title: "Events",
         topic: "Vivacity",
         description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
     },
     {
-        image: odeum,
+        image: assets.events.odeum,
         author: "Rendition",
         title: "Events",
         topic: "Odeum",

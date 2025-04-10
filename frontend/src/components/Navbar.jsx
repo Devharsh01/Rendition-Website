@@ -3,7 +3,7 @@ import { fadeIn } from '../utils/motion';
 import { motion } from 'framer-motion';
 import { withLoadTracking } from './withLoadTracking'
 
-const pages = ["Home", "Emotions", "Events", "Team", "Productions"];
+const pages = ["Home", "Events", "Emotions", "Productions", "Team"];
 
 const Navbar = withLoadTracking(({ onLoad }) => {
   const [checked, setChecked] = useState(false);
@@ -70,7 +70,7 @@ const Navbar = withLoadTracking(({ onLoad }) => {
     >
       <div className="sm:hidden flex">
         {/* Navbar Items for Mobile Users */}
-        <div className="flex flex-col z-20">
+        <div className="flex flex-col justify-center z-20">
           <input
             type="checkbox"
             id="checkbox"
@@ -142,7 +142,7 @@ const Navbar = withLoadTracking(({ onLoad }) => {
                 hover:bg-red-700 transition-all duration-300 mt-8"
                 onClick={() => handleClick("Form")}
               >
-                Get In Touch
+                Be Dramatic!
               </motion.button>
             </div>
           </div>
@@ -182,7 +182,7 @@ const Navbar = withLoadTracking(({ onLoad }) => {
 
       {/* Get-In-Touch Button */}
       <button
-        className="text-content bg-[#B20024] text-white font-semibold lg:text-lg md:text-base text-sm py-2 px-6 rounded-full shadow-lg border-none hover:bg-[#80001A] transition-all duration-300 ease-in-out"
+        className="text-content bg-[#B20024] text-white font-semibold 2xl:text-xl lg:text-lg md:text-base sm:text-sm text-[12px] py-2 sm:px-6 px-3 rounded-full shadow-lg border-none hover:bg-[#80001A] transition-all duration-300 ease-in-out"
         onClick={() => {
           handleClick("Form");
         }}
