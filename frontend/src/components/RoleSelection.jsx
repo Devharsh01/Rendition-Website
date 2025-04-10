@@ -319,6 +319,7 @@ const RoleSelection = withLoadTracking(
                 onClick={onBack}
                 onMouseEnter={() => setShowBackWarning(true)}
                 onMouseLeave={() => setShowBackWarning(false)}
+                disabled={isSubmitting}
               >
                 Back
               </motion.button>

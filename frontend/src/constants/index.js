@@ -153,49 +153,49 @@ const events = [
         author: "Rendition",
         title: "Events",
         topic: "Abhinay",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "Abhinay is our grand opening – a vibrant fusion of theatre, laughter, and interaction where we welcome the new batch with dramatic flair, showcasing the soul of Rendition in its purest, most entertaining form."
     },
     {
         image: assets.events.club_intro,
         author: "Rendition",
         title: "Events",
         topic: "Club-Intro",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "Our official spotlight moment! Club-Intro is where we set the stage on fire, performing a crowd-pulling act to give the entire batch a glimpse into the powerful world of Rendition."
     },
     {
         image: assets.events.reelMaking,
         author: "Rendition",
         title: "Events",
         topic: "Reel Making Competition",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "Lights, camera, creativity! This ice-breaking event lets our new recruits unleash their fun side, compete in quirky reel-making battles, and bond over storytelling, spontaneity, and cinematic madness."
     },
     {
         image: assets.events.rubaroo,
         author: "Rendition",
         title: "Events",
         topic: "Rubaroo",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "Rubaroo is our warmest hug to the new batch—an energetic fresher’s celebration where we perform hilarious theatre acts, leaving students and faculty roaring with laughter and cheering for more."
     },
     {
         image: assets.events.out_station,
         author: "Rendition",
         title: "Events",
         topic: "Out-Station",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "When we step out, we conquer! Out-Station is our fierce and fearless venture into inter-college arenas where we perform, compete, and make the name Rendition echo far and wide."
     },
     {
         image: assets.events.vivacity,
         author: "Rendition",
         title: "Events",
         topic: "Vivacity",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "Vivacity is where we own our home turf! In LNMIIT’s biggest cultural fest, we compete with the best, captivate massive crowds, and leave a legacy of drama, expression, and energy."
     },
     {
         image: assets.events.odeum,
         author: "Rendition",
         title: "Events",
         topic: "Odeum",
-        description: "In this event, there is a lot of things happening and to enjoy these all events, let's join and celebrate hard"
+        description: "A true celebration of our club’s spirit—Odeum is a playful, in-house theatre showdown where teams face off in acts and monoacts, pushing creativity and camaraderie to their thrilling best!"
     },
 ]
 

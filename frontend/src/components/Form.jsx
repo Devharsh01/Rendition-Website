@@ -273,7 +273,7 @@ const Form = withLoadTracking(({onLoad}) => {
                       placeholder="Name"
                       onChange={handleChange}
                       value={details.name}
-                      className={`input-field ${errors.name} relative text-white text-xl sm:text-2xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
+                      className={`input-field ${errors.name} relative text-white text-lg sm:text-xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
                     />
                   </section>
 
@@ -306,7 +306,7 @@ const Form = withLoadTracking(({onLoad}) => {
                       placeholder="Roll Number"
                       onChange={handleChange}
                       value={details.rollNo}
-                      className={`input-field ${errors.rollNo} relative text-white text-xl sm:text-2xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
+                      className={`input-field ${errors.rollNo} relative text-white text-lg sm:text-xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
                     />
                   </section>
 
@@ -341,7 +341,7 @@ const Form = withLoadTracking(({onLoad}) => {
                       placeholder="Email"
                       onChange={handleChange}
                       value={details.email}
-                      className={`input-field ${errors.email} relative text-white text-xl sm:text-2xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
+                      className={`input-field ${errors.email} relative text-white text-lg sm:text-xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
                     />
                   </section>
 
@@ -392,7 +392,7 @@ const Form = withLoadTracking(({onLoad}) => {
                       placeholder="Mobile Number"
                       onChange={handleChange}
                       value={details.mobNo}
-                      className={`input-field no-spinner ${errors.mobNo} relative text-white text-xl sm:text-2xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
+                      className={`input-field no-spinner ${errors.mobNo} relative text-white text-lg sm:text-xl w-full h-auto bg-transparent border-white border-b-2 focus:outline-none`}
                     />
                   </section>
                 </div>

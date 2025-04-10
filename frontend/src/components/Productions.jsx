@@ -73,7 +73,7 @@ const Productions = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Productions"
-      className="relative bg-gradient-to-br bg-[#080017] w-full h-auto overflow-hidden flex flex-col -mt-12 p-0 p-4"
+      className="relative bg-gradient-to-br bg-[#080017] w-full h-auto overflow-hidden flex flex-col sm:-mt-12 p-0 p-4"
     >
       {/* Spotlight effect */}
       <div className="absolute w-full h-full inset-0 bg-[radial-gradient(ellipse_at_60%_40%,_#4d000f_1%,_transparent_45%)]"></div>

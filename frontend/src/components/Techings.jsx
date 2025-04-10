@@ -154,7 +154,7 @@ const Techings = withLoadTracking(({ onLoad }) => {
   return (
     <div
       id="Emotions"
-      className="sticky top-0 w-full bg-gradient-to-br from-[#000000] via-[#1d002d] to-[#000000]"
+      className="sticky top-0 w-full h-auto bg-gradient-to-br from-[#000000] via-[#1d002d] to-[#000000]"
     >
       {/* Spotlight effect */}
 
@@ -172,10 +172,10 @@ const Techings = withLoadTracking(({ onLoad }) => {
         </motion.div>
       </div>
       {selected !== null ? (
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center items-center h-full z-30">
           <div
             id="enlarged"
-            className="enlarged-view absolute top-[9%] bg-red-800 w-[90%] h-1/2 md:h-4/5 z-10 openAnimation overflow-hidden"
+            className="enlarged-view absolute top-[9%] bg-red-800 w-[90%] h-1/2 md:h-4/5 z-10 openAnimation md:overflow-y-hidden"
             style={{
               backgroundImage: `url(${extendedEmotions[selected].icon})`,
               backgroundSize: "cover",
@@ -198,13 +198,13 @@ const Techings = withLoadTracking(({ onLoad }) => {
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
             >
-              <h1 className="hindi-text text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl my-6">
+              <h1 className="hindi-text text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-2 md:mb-6 my-6">
                 {extendedEmotions[selected].name}
               </h1>
             </motion.div>
-            <div className="relative h-full md:h-auto flex flex-col-reverse md:flex-row justify-around md:justify-center items-center p-10 pt-0 gap-4">
-              <div className=" text-content enlarged-description w-full md:w-[40%] text-white text-lg md:text-xl lg:text-2xl"></div>
-              <div className="relative w-full md:w-[60%] flex flex-row -top-[5%] ">
+            <div className="relative h-full md:h-auto flex flex-col-reverse md:flex-row justify-evenly md:justify-center items-center p-10 pt-0 -mt-6 sm:mt-0 gap:2 sm:gap-4">
+              <div className=" text-content enlarged-description w-full md:w-[40%] text-white text-base md:text-xl lg:text-2xl"></div>
+              <div className="relative w-full w-[62%] sm:w-[60%] flex flex-row ">
                 <img
                   src={Object.values(extendedEmotions[selected].images)[0]}
                   alt=""
@@ -293,9 +293,12 @@ const Techings = withLoadTracking(({ onLoad }) => {
                 }}
               >
                 <div className="hindi-text absolute text-white z-30 text-4xl w-full h-full flex justify-center items-center">
+                  <div className={`absolute w-full h-full transition-all duration-500 bg-black z-20 ${
+                      hovered === index ? "opacity-50" : "opacity-50 md:opacity-0"
+                    }`}></div>
                   <h1
                     className={`transition-all duration-500 z-30 ${
-                      hovered === index ? "opacity-100" : "opacity-0"
+                      hovered === index ? "opacity-100" : "opacity-100 md:opacity-0"
                     }`}
                   >
                     {item.name}
