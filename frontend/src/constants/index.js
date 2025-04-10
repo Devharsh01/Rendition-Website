@@ -95,55 +95,55 @@ const emotions = [
         name: "हास्य",
         icon: assets.emotions.happy,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Making People laugh their hearts out from our acting and bringing a wave of joyfulness in the air is what we excel at."
+        description: "Bringing smiles, chuckles, and bursts of laughter — we master the art of spreading joy. Humor connects hearts, and we thrive on making the audience lose themselves in pure happiness."
     },
     {
         name: "श्रृंगार",
         icon: assets.emotions.love,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Love is in the air and so, it's the most crucial to represent with proper energy and feelings"
+        description: "The tender gaze, the gentle gestures — love is the heartbeat of expression. We weave passion and beauty into every scene, making emotions come alive on stage."
     },
     {
         name: "करुणा",
         icon: assets.emotions.sad,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Sadness is felt in the heart and grasping it on demand and showcasing it in front of thousands requires talent and adhereance."
+        description: "Tears speak louder than words. We channel grief, empathy, and deep emotion to connect souls through the silent power of sorrow and compassion."
     },
     {
         name: "रौद्र",
         icon: assets.emotions.anger,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Keeping your cool and still showing you anger is quite some skill"
+        description: "Controlled rage and fiery intensity — anger is bold and raw. We embody it with precision, unleashing power while staying rooted in discipline."
     },
     {
         name: "शांति",
         icon: assets.emotions.peace,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone wants some peace in their life and we showcase that to everyone."
+        description: "The calm in chaos, the stillness within — peace is subtle yet profound. We bring serenity to the stage, helping the audience breathe and feel centered.."
     },
     {
         name: "शौर्य",
         icon: assets.emotions.courage,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Everyone demands it yet only some have it. Courage is one of a major emotion to display."
+        description: "Strength, bravery, and honor — courage blazes through our performances. It inspires, uplifts, and ignites the fire within both actor and audience."
     },
     {
         name: "अद्भुत",
         icon: assets.emotions.surprise,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Surprise is quite hard to display yet one of the best emotions displayed."
+        description: "Eyes widen, breath halts — wonder brings magic to life. We love capturing awe and curiosity, drawing our viewers into a world of marvels."
     },
     {
         name: "भयानक",
         icon: assets.emotions.terror,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. Terror is born in the heart and travelled throughout the body in a flow of emotions."
+        description: "The chill down the spine, the held breath — fear is felt in silence. We create moments of suspense that leave the audience gripping their seats.."
     },
     {
         name: "बिभात्स्य",
         icon: assets.emotions.disgust,
         images: [assets.emotions.love, assets.emotions.peace, assets.emotions.disgust],
-        description: "Displaying Emotion is one of the hardest yet most satisfying task we do! Learning how to swim in the ocean of emotions smoothly. It can be from a thing or from a person or from anything. Disgust makes everyone doubt if they should do it or not."
+        description: "Repulsion, rejection, revulsion — disgust challenges both actor and viewer. It pushes limits and sparks thought through raw, honest expression."
     },
 ]
 
