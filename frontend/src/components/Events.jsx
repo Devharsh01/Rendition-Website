@@ -86,7 +86,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                 <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div> */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#080017] from-10% to-transparent to-60%"></div>
                 <div
-                  className={`details absolute top-8 md:top-16 w-[1140px] max-w-screen-sm 2xl:max-w-[1400px] left-6 sm:left-8 md:left-16 pr-80 sm:pr-28 box-border text-white text-shadow-custom`}
+                  className={`details absolute top-8 md:top-16 w-[1140px] max-w-screen-sm 2xl:max-w-[1000px] left-6 sm:left-8 md:left-16 pr-80 sm:pr-28 box-border text-white text-shadow-custom`}
                 >
                   <motion.div
                     className={`text-content author text-sm md:text-md font-bold leading-6 `}
@@ -116,7 +116,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                     {item.topic}
                   </motion.div>
                   <motion.div
-                    className="text-content des text-sm"
+                    className="text-content des 2xl:text-lg text-sm"
                     variants={textVariant(0.6)}
                     initial="hidden"
                     whileInView="show"
