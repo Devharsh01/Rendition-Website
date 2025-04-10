@@ -86,10 +86,10 @@ const Events = withLoadTracking(({ onLoad }) => {
                 <div className="absolute w-full inset-0 bg-gradient-to-t from-[rgba(8,0,23,1)] from-5% to-transparent to-70%"></div> */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#080017] from-10% to-transparent to-60%"></div>
                 <div
-                  className={`details absolute top-8 md:top-16 w-[1140px] max-w-screen-sm 2xl:max-w-[1560px] left-6 sm:left-8 md:left-16 pr-80 sm:pr-28 box-border text-white text-shadow-custom`}
+                  className={`details absolute top-8 md:top-16 w-[1140px] max-w-screen-sm 2xl:max-w-[1400px] left-6 sm:left-8 md:left-16 pr-80 sm:pr-28 box-border text-white text-shadow-custom`}
                 >
                   <motion.div
-                    className={`text-content author text-sm md:text-md font-bold 2xl:text-3xl leading-6 `}
+                    className={`text-content author text-sm md:text-md font-bold leading-6 `}
                     variants={textVariant(0)}
                     initial="hidden"
                     whileInView="show"
@@ -98,7 +98,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                     {item.author}
                   </motion.div>
                   <motion.div
-                    className={`heading title font-bold text-3xl md:text-5xl 2xl:text-7xl leading-[1.3em] 2xl:leading-[1.5em] `}
+                    className={`heading title font-bold text-3xl md:text-5xl leading-[1.3em] `}
                     variants={textVariant(0.2)}
                     initial="hidden"
                     whileInView="show"
@@ -107,7 +107,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                     {item.title}
                   </motion.div>
                   <motion.div
-                    className={`sub-heading topic font-bold text-5xl md:text-7xl 2xl:text-9xl leading-[1.3em] text-[#FF0033]`}
+                    className={`sub-heading topic font-bold text-5xl md:text-7xl leading-[1.3em] text-[#FF0033]`}
                     variants={textVariant(0.4)}
                     initial="hidden"
                     whileInView="show"
@@ -116,7 +116,7 @@ const Events = withLoadTracking(({ onLoad }) => {
                     {item.topic}
                   </motion.div>
                   <motion.div
-                    className="text-content des text-sm 2xl:text-3xl 2xl:leading-[1.5em] 2xl:pt-5"
+                    className="text-content des text-sm"
                     variants={textVariant(0.6)}
                     initial="hidden"
                     whileInView="show"
@@ -154,13 +154,13 @@ const Events = withLoadTracking(({ onLoad }) => {
               );
             })}
         </div>
-        <div className="arrows absolute left-12 sm:left-1/4 top-3/4 max-w-[90px] 2xl:max-w-[120px] flex gap-[10px] items-center justify-center z-20">
+        <div className="arrows absolute left-12 sm:left-1/4 top-3/4 max-w-[90px] 2xl:max-w-[100px] flex gap-[10px] items-center justify-center z-20">
           <button
             id="prev"
             onClick={() => {
               showSlider("prev");
             }}
-            className="w-[40px] h-[40px] 2xl:w-[60px] 2xl:h-[60px] rounded-md text-white bg-[#FF0033] border-none font-bold text-lg transition-all duration-500 hover:bg-[#eee] hover:text-[#555] "
+            className="w-[40px] h-[40px] 2xl:w-[50px] 2xl:h-[50px] rounded-md text-white bg-[#FF0033] border-none font-bold text-lg transition-all duration-500 hover:bg-[#eee] hover:text-[#555] "
           >
             {" "}
             {"<"}{" "}
@@ -170,7 +170,7 @@ const Events = withLoadTracking(({ onLoad }) => {
             onClick={() => {
               showSlider("next");
             }}
-            className="w-[40px] h-[40px] 2xl:w-[60px] 2xl:h-[60px] rounded-md text-white  bg-[#FF0033] border-none font-bold text-lg transition-all duration-500 hover:bg-[#eee] hover:text-[#555] "
+            className="w-[40px] h-[40px] 2xl:w-[50px] 2xl:h-[50px] rounded-md text-white  bg-[#FF0033] border-none font-bold text-lg transition-all duration-500 hover:bg-[#eee] hover:text-[#555] "
           >
             {" "}
             {">"}{" "}

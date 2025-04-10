@@ -82,7 +82,7 @@ const assets = {
         harshita: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107176/Harshita_zsazr0.png',
         devansh: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107174/Devansh_qulz6q.png',
         rahul: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107178/Rahul_blwj7w.png',
-        y21_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107186/Y21_Team_xxe8eu.jpg',
+        y21_team: 'https://res.cloudinary.com/dspenamcg/image/upload/f_auto,q_auto/v1744309669/Y21_Team_zwi0sh.heic',
         y22_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/Y22_Team_pv10kt.jpg',
         y23_team: 'https://res.cloudinary.com/dspenamcg/image/upload/v1744107187/Y23_Team_ea5ysi.jpg',
     }
